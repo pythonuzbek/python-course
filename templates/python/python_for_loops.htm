@@ -1,0 +1,431 @@
+<!DOCTYPE html><html lang="en"><head>
+    {% load static %}
+<title>Python for Loops</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes, maximum-scale=6"> <meta name="Keywords" content="Loops, for, Python, HTML, Python, CSS, SQL, JavaScript, Perl, PHP, Java, C, C++, C#, jQuery, Bootstrap, Colors, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Machine Learning, Data Science, Tutorials, Programming, Data Structure, Algorithms, Web Development, Training, Learning, Quiz, Exercises, Courses, References, Computer Science, Management, Finance, Examples, Articles, Demos, Tips, Website">
+<meta name="Description" content="Python for Loops - The for loop in Python has the ability to iterate over the items of any sequence, such as a list, tuple or a string.">
+<meta property="og:image" content="../images/tp_logo_436.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<meta property="og:title" content="Python for Loops">
+<meta property="og:description" content="Python for Loops - The for loop in Python has the ability to iterate over the items of any sequence, such as a list, tuple or a string.">
+<link rel="icon" href="{% static '/images/favicon.ico' %}">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/favicon-16x16.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&amp;family=Lato:wght@400;700&amp;family=Poppins:wght@400;500;600&amp;family=Raleway:wght@500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static '/static/css/lib-style_v41.56.css' %}" media="screen, print">
+<script id="adv" data-cfasync="false">(function(w, d) { var s = d.createElement('script'); s.src = '//cdn.adpushup.com/40046/adpushup.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<script>
+!function(t,e){var i=function(t,e){if(e.body){var n=e.createElement("div");n.className="ad-slot ad gpt-div-slot",n.style="position: absolute; visibility: hidden;",n.textContent="&nbsp;",e.body.appendChild(n),setTimeout((function(){if(0===n.clientHeight){var t=e.createElement("script");t.setAttribute("src","https://delivery.adrecover.com/18107/adRecover.js"),t.setAttribute("type","text/javascript"),t.setAttribute("async",!0),e.head.append(t)}}),0)}else setTimeout((function(){i(t,e)}),50)};i(t,e)}(window,document);
+</script>
+</head>
+<body style="--container: min(95%, 1780px);">
+<button class="icon-button--inverted scroll-to-top-button" title="Scroll Up">
+  <svg style="rotate: 180deg" width="24" height="24" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.52246 5.06689L6.08496 8.50439L2.64746 5.06689" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+
+<main class="bg-light" style="overflow: unset;">
+<div class="container-fluid">
+<div class="row">
+<div class="tutorial-toc">
+<div class="toc-nav">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+linebreaks: { automatic: true, width: "container" }          
+}              
+});
+</script>
+<script type="text/javascript" src="{% static '/mathjax/latest/MathJax_config=TeX-AMS-MML_HTMLorMML.js' %}}"></script>
+<div class="mini-logo">
+<img src="{% static 'images/python-mini-logo_v1.jpg' %}" alt="Python Tutorial">
+</div>
+<ul class="toc chapters">
+<li class="heading">Python Basics</li>
+<li><a href="{% url 'index_view' %}">Python - Home</a></li>
+<li><a href="{% url 'python_overview' %}">Python - Overview</a></li>
+<li><a href="{% url 'basic_syntax' %}">Python - Basic Syntax</a></li>
+<li><a href="{% url 'variables' %}">Python - Variables</a></li>
+<li><a href="{% url 'data_types' %}">Python - Data Types</a></li>
+<li><a href="{% url 'operators' %}">Python - Operators</a></li>
+<li><a href="{% url 'arithmetic_operators' %}">Python - Arithmetic Operators</a></li>
+<li><a href="{% url 'comments' %}">Python - Comments</a></li>
+<li><a href="{% url 'boolean' %}">Python - Booleans</a></li>
+<li><a href="{% url 'if_statement' %}">Python - If Statement</a></li>
+<li><a href="{% url 'if_else' %}">Python - If else</a></li>
+<li><a href="{% url 'nested_if' %}">Python - Nested If</a></li>
+<li><a href="{% url 'loops' %}">Python - Loops</a></li>
+<li><a href="{% url 'for_loops' %}">Python - for Loops</a></li>
+<li><a href="{% url 'while_loops' %}">Python - While Loops</a></li>
+<li><a href="{% url 'function' %}">Python - Functions</a></li>
+<li><a href="{% url 'strings' %}">Python - Strings</a></li>
+<li><a href="{% url 'slicing_string' %}">Python - Slicing Strings</a></li>
+<li><a href="{% url 'string_exercise' %}">Python - String Exercises</a></li>
+<li><a href="{% url 'list' %}">Python - Lists</a></li>
+<li><a href="{% url 'list-comprehension' %}">Python - List Comprehension</a></li>
+<li><a href="{% url 'list_methods' %}">Python - List Methods</a></li>
+<li><a href="{% url 'list_exercise' %}">Python - List Exercises</a></li>
+<li><a href="{% url 'tuple' %}">Python - Tuples</a></li>
+<li><a href="{% url 'tuple_methods' %}">Python - Tuple Methods</a></li>
+<li><a href="{% url 'tuple_exercise' %}">Python - Tuple Exercises</a></li>
+<li><a href="{% url 'set' %}">Python - Sets</a></li>
+<li><a href="{% url 'set_methods' %}">Python - Set Methods</a></li>
+<li><a href="{% url 'set_exercise' %}">Python - Set Exercises</a></li>
+<li><a href="{% url 'dictionary' %}">Python - Dictionaries</a></li>
+<li><a href="{% url 'dictionary_methods' %}">Python - Dictionary Methods</a></li>
+<li><a href="{% url 'dictionary_exercise' %}">Python - Dictionary Exercises</a></li>
+<li><a href="{% url 'array' %}">Python - Arrays</a></li>
+<li><a href="{% url 'oop_concepts' %}">Python - OOPs Concepts</a></li>
+<li><a href="{% url 'object_class' %}">Python - Object &amp; Classes</a></li>
+<li><a href="{% url 'class_attributes' %}">Python - Class Attributes</a></li>
+<li><a href="{% url 'class_methods' %}">Python - Class Methods</a></li>
+<li><a href="{% url 'inheritance' %}">Python - Inheritance</a></li>
+<li><a href="{% url 'polymorphism' %}">Python - Polymorphism</a></li>
+<li><a href="{% url 'encapsulation' %}">Python - Encapsulation</a></li>
+<li><a href="{% url 'package' %}">Python - Packages</a></li>
+<li><a href="{% url 'discuss' %}">Python - Discussion</a></li>
+</ul>
+      </div>
+      <div id="stickyparent" class="d-none d-sm-block">
+         <div style="height:250px;width:300px;" id="sticky-ad">
+            <div id="430c9911-782f-495d-88f9-69f58ca8c9a4" class="_ap_apex_ad">
+               <script>
+               var adpushup = adpushup || {};
+               adpushup.que = adpushup.que || [];
+               adpushup.que.push(function() {
+               adpushup.triggerAd("430c9911-782f-495d-88f9-69f58ca8c9a4");
+               });
+               </script>
+            </div>
+         </div>
+      </div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="tutorial-content" id="mainContent">
+<h1>Python for Loops</h1>
+<hr>
+<div id="adp_top_ads" style="text-align:center !important;overflow: hidden; max-height:99px;min-height:99px"></div>
+<script>
+     var adPos = document.getElementById('adp_top_ads');
+     var ad_id_720 = "8014640d-fd34-4b2e-9b1b-cc67234a2325";
+     var ad_id_650 = "2d1bb2c4-eb72-471d-9c80-1bf5514728c1";
+     var ad_id_300 = "df94a1a9-ae2f-432d-9a92-d93823ff4503";
+     var width = window.innerWidth;
+     var ad_id = ad_id_720;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+        adPos.style.minHeight = "260px";
+        adPos.style.maxHeight = "260px";
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+     var adpushup = adpushup || {};
+     adpushup.que = adpushup.que || [];
+     adpushup.que.push(function() {
+     adpushup.triggerAd(ad_id);
+     });
+</script>
+<hr>
+<div class="clearer"></div>
+<p>The <b>for</b> loop in Python has the ability to iterate over the items of any sequence, such as a list, tuple or a string.</p>
+<h3>Syntax</h3>
+<pre class="just-code notranslate language-python" data-lang="python">for iterating_var in sequence:
+   statements(s)
+</pre>
+<p>If a sequence contains an expression list, it is evaluated first. Then, the first item (at 0th index) in the sequence is assigned to the iterating variable iterating_var.</p>
+<p>Next, the statements block is executed. Each item in the list is assigned to iterating_var, and the statement(s) block is executed until the entire sequence is exhausted.</p>
+<p>The following flow diagram illustrates the working of <b>for</b> loop −</p>
+<img src="{% static 'images/forloop.jpg' %}" alt="forloop">
+<p>Since the loop is executed for each member element in a sequence, there is no need for explicit verification of Boolean expression controlling the loop (as in <b>while</b> loop).</p>
+<p>The sequence objects such as list, tuple or string are called <b>iterables</b>, as the for loop iterates through the collection. Any iterator object can be iterated by the <b>for</b> loop.</p>
+<p>The view objects returned by items(), keys() and values() methods of dictionary are also iterables, hence we can run a <b>for</b> loop with these methods.</p>
+<p>Python's built-in <b>range()</b> function returns an iterator object that streams a sequence of numbers. We can run a for loop with range as well.</p>
+<h2>Using "for" with a String</h2>
+<p>A string is a sequence of Unicode letters, each having a positional index. The following example compares each character and displays if it is not a vowel ('a', 'e', 'I', 'o' or 'u')</p>
+<h3>Example</h3>
+<pre class="demo-code notranslate language-python" data-lang="python3">zen = '''
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+'''
+for char in zen:
+   if char not in 'aeiou':
+      print (char, end='')
+</pre>
+<h3>Output</h3>
+<p>On executing, this code will produce the following output −</p>
+<pre class="result notranslate">Btfl s bttr thn gly.
+Explct s bttr thn mplct.
+Smpl s bttr thn cmplx.
+Cmplx s bttr thn cmplctd.
+</pre>
+<h2>Using "for" with a Tuple</h2>
+<p>Python's tuple object is also an indexed sequence, and hence we can traverse its items with a <b>for</b> loop.</p>
+<h3>Example</h3>
+<p>In the following example, the <b>for</b> loop traverses a tuple containing integers and returns the total of all numbers.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">numbers = (34,54,67,21,78,97,45,44,80,19)
+total = 0
+for num in numbers:
+   total+=num
+print ("Total =", total)
+</pre>
+<h3>Output</h3>
+<p>On executing, this code will produce the following output −</p>
+<pre class="result notranslate">Total = 539
+</pre>
+<h2>Using "for" with a List</h2>
+<p>Python's list object is also an indexed sequence, and hence we can traverse its items with a <b>for</b> loop.</p>
+<h3>Example</h3>
+<p>In the following example, the for loop traverses a list containing integers and prints only those which are divisible by 2.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">numbers = [34,54,67,21,78,97,45,44,80,19]
+total = 0
+for num in numbers:
+   if num%2 == 0:
+      print (num)
+</pre>
+<h3>Output</h3>
+<p>On executing, this code will produce the following output −</p>
+<pre class="result notranslate">34
+54
+78
+44
+80
+</pre>
+<h2>Using "for" with a Range Object</h2>
+<p>Python's buil-in range() function returns a range object. Python's range object is an iterator which generates an integer with each iteration. The object contains integrrs from start to stop, separated by step parameter.</p>
+<h3>Syntax</h3>
+<p>The range() function has the following syntax −</p>
+<pre class="just-code notranslate language-python" data-lang="python">range(start, stop, step)
+</pre>
+<h3>Parameters</h3>
+<ul class="list">
+<li><p><b>Start</b> − Starting value of the range. Optional. Default is 0</p></li>
+<li><p><b>Stop</b> − The range goes upto stop-1</p></li>
+<li><p><b>Step</b> − Integers in the range increment by the step value. Option, default is 1.</p></li>
+</ul>
+<h3>Return Value</h3>
+<p>The range() function returns a range object. It can be parsed to a list sequence.</p>
+<h3>Example</h3>
+<pre class="demo-code notranslate language-python" data-lang="python3">numbers = range(5)
+'''
+start is 0 by default,
+step is 1 by default,
+range generated from 0 to 4
+'''
+print (list(numbers))
+# step is 1 by default, range generated from 10 to 19
+numbers = range(10,20)
+print (list(numbers))
+# range generated from 1 to 10 increment by step of 2
+numbers = range(1, 10, 2)
+print (list(numbers))
+</pre>
+<h3>Output</h3>
+<p>On executing, this code will produce the following output −</p>
+<pre class="result notranslate">[0, 1, 2, 3, 4]
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+[1, 3, 5, 7, 9]
+</pre>
+<h3>Example</h3>
+<p>Once we obtain the range, we can use the <b>for</b> loop with it.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">for num in range(5):
+ print (num, end=' ')
+print()
+for num in range(10,20):
+ print (num, end=' ')
+print()
+for num in range(1, 10, 2):
+ print (num, end=' ')
+</pre>
+<h3>Output</h3>
+<p>On executing, this code will produce the following output −</p>
+<pre class="result notranslate">0 1 2 3 4
+10 11 12 13 14 15 16 17 18 19
+1 3 5 7 9
+</pre>
+<h2>Factorial of a Number</h2>
+<p>Factorial is a product of all numbers from 1 to that number say n. It can also be defined as product of 1, 2, up to n.</p>
+<pre class="just-code notranslate language-python" data-lang="python">Factorial of a number n! = 1 * 2 * . . . . . * n
+</pre>
+<p>We use the range() function to get the sequence of numbers from 1 to n-1 and perform cumumulative multplication to get the factorial value.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">fact=1
+N = 5
+for x in range(1, N+1):
+   fact=fact*x
+print ("factorial of {} is {}".format(N, fact))
+</pre>
+<h3>Output</h3>
+<p>On executing, this code will produce the following output −</p>
+<pre class="result notranslate">factorial of 5 is 120
+</pre>
+<h3></h3>
+<p>In the above program, change the value of N to obtain factorial value of different numbers.</p>
+<h2>Using "for" Loop with Sequence Index</h2>
+<p>To iterate over a sequence, we can obtain the list of indices using the range() function</p>
+<pre class="just-code notranslate language-python" data-lang="python">Indices = range(len(sequence))
+</pre>
+<p>We can then form a <b>for</b> loop as follows:</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">numbers = [34,54,67,21,78]
+indices = range(len(numbers))
+for index in indices:
+   print ("index:",index, "number:",numbers[index])
+</pre>
+<p>On executing, this code will produce the following <b>output</b> −</p>
+<pre class="result notranslate">index: 0 number: 34
+index: 1 number: 54
+index: 2 number: 67
+index: 3 number: 21
+index: 4 number: 78
+</pre>
+<h2>Using "for" with Dictionaries</h2>
+<p>Unlike a list, tuple or a string, dictionary data type in Python is not a sequence, as the items do not have a positional index. However, traversing a dictionary is still possible with different techniques.</p>
+<p>Running a simple <b>for</b> loop over the dictionary object traverses the keys used in it.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">numbers = {10:"Ten", 20:"Twenty", 30:"Thirty",40:"Forty"}
+for x in numbers:
+   print (x)
+</pre>
+<p>On executing, this code will produce the following <b>output</b> −</p>
+<pre class="result notranslate">10
+20
+30
+40
+</pre>
+<p>Once we are able to get the key, its associated value can be easily accessed either by using square brackets operator or with the <b>get()</b> method. Take a look at the following example −</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">numbers = {10:"Ten", 20:"Twenty", 30:"Thirty",40:"Forty"}
+for x in numbers:
+   print (x,":",numbers[x])
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">10 : Ten
+20 : Twenty
+30 : Thirty
+40 : Forty
+</pre>
+<p>The items(), keys() and values() methods of dict class return the view objects dict_items, dict_keys and dict_values respectively. These objects are iterators, and hence we can run a for loop over them.</p>
+<p>The dict_items object is a list of key-value tuples over which a for loop can be run as follows −</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">numbers = {10:"Ten", 20:"Twenty", 30:"Thirty",40:"Forty"}
+for x in numbers.items():
+   print (x)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">(10, 'Ten')
+(20, 'Twenty')
+(30, 'Thirty')
+(40, 'Forty')
+</pre>
+<p>Here, "x" is the tuple element from the dict_items iterator. We can further unpack this tuple in two different variables. Check the following code −</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">numbers = {10:"Ten", 20:"Twenty", 30:"Thirty",40:"Forty"}
+for x,y in numbers.items():
+   print (x,":", y)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">10 : Ten
+20 : Twenty
+30 : Thirty
+40 : Forty
+</pre>
+<p>Similarly, the collection of keys in dict_keys object can be iterated over. Take a look at the following example −</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">numbers = {10:"Ten", 20:"Twenty", 30:"Thirty",40:"Forty"}
+for x in numbers.keys():
+   print (x, ":", numbers[x])
+</pre>
+<p>It will produce the same <b>output</b> −</p>
+<pre class="result notranslate">10 : Ten
+20 : Twenty
+30 : Thirty
+40 : Forty
+</pre>
+		<div class="bottom-library-ads mt" style="margin:5px;">
+	   <div class="google-bottom-ads" id="google-bottom-ads" style="height:280px;">
+			<div></div>
+			<div>
+			  <div id="adp_bottom_ads"></div>
+                        <a href="{% url 'execute_code' %}" class="go-to-compiler-button" style="display: inline-block; margin-top: 20px; text-decoration: none; color: #fff; background-color: #4caf50; padding: 10px 20px; font-size: 16px; border-radius: 4px; cursor: pointer;">
+            Let's Coding
+        </a>
+			  <script>
+				 var adPos = document.getElementById('adp_bottom_ads');
+				 var mobile_ad_id = "6d621d7e-9531-4f26-810f-68af67dc6366";
+				 var desktop_ad_id = "4951d1d6-24d4-4a31-afb7-2c22c489eae1";
+				 var adpushup = adpushup || {};
+				 adpushup.que = adpushup.que || [];
+				 adpushup.que.push(function() {
+					var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+					adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+					adpushup.triggerAd(ad_id);
+				 });
+			  </script>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<div>
+		<div class="data-sticky" id="google-right-ads">
+			<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;min-height:280px!important">
+			   <div id="2557b9b8-4c1f-4586-a953-f123dbd2ed8e" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("2557b9b8-4c1f-4586-a953-f123dbd2ed8e");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+			<div class="google-right-ad" style="margin-top:16px;min-height:280px!important">
+			   <div id="b078e6a3-e1b7-40fe-b690-11ac441ad2d5" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("b078e6a3-e1b7-40fe-b690-11ac441ad2d5");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+			<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;min-height:600px!important">
+			   <div id="8f8814c2-d64c-4d26-9cb9-543653c0b48f" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("8f8814c2-d64c-4d26-9cb9-543653c0b48f");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</main>
+
+
+<script sync="" src="..{% static '/static/js/lib-script_v10.2.js' %}' %}"></script>
+<script src="https://accounts.google.com/gsi/client" async="" defer=""></script> 
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EX9ZP4VY84"></script>
+<script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-EX9ZP4VY84');
+</script>
+
+
+</body></html>

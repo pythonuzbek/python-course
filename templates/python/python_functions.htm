@@ -1,0 +1,392 @@
+<!DOCTYPE html><html lang="en"><head>
+    {% load static %}
+<title>Python - Functions</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes, maximum-scale=6"> <meta name="Keywords" content="Functions, Python, HTML, Python, CSS, SQL, JavaScript, Perl, PHP, Java, C, C++, C#, jQuery, Bootstrap, Colors, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Machine Learning, Data Science, Tutorials, Programming, Data Structure, Algorithms, Web Development, Training, Learning, Quiz, Exercises, Courses, References, Computer Science, Management, Finance, Examples, Articles, Demos, Tips, Website">
+<meta name="Description" content="Python - Functions - A Python function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.">
+<meta property="og:image" content="../images/tp_logo_436.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<meta property="og:title" content="Python - Functions">
+<meta property="og:description" content="Python - Functions - A Python function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.">
+<link rel="icon" href="{% static '/images/favicon.ico' %}">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/favicon-16x16.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&amp;family=Lato:wght@400;700&amp;family=Poppins:wght@400;500;600&amp;family=Raleway:wght@500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static '/static/css/lib-style_v41.56.css' %}" media="screen, print">
+<script id="adv" data-cfasync="false">(function(w, d) { var s = d.createElement('script'); s.src = '//cdn.adpushup.com/40046/adpushup.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<script>
+!function(t,e){var i=function(t,e){if(e.body){var n=e.createElement("div");n.className="ad-slot ad gpt-div-slot",n.style="position: absolute; visibility: hidden;",n.textContent="&nbsp;",e.body.appendChild(n),setTimeout((function(){if(0===n.clientHeight){var t=e.createElement("script");t.setAttribute("src","https://delivery.adrecover.com/18107/adRecover.js"),t.setAttribute("type","text/javascript"),t.setAttribute("async",!0),e.head.append(t)}}),0)}else setTimeout((function(){i(t,e)}),50)};i(t,e)}(window,document);
+</script>
+</head>
+<body style="--container: min(95%, 1780px);">
+<button class="icon-button--inverted scroll-to-top-button" title="Scroll Up">
+  <svg style="rotate: 180deg" width="24" height="24" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.52246 5.06689L6.08496 8.50439L2.64746 5.06689" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+
+<main class="bg-light" style="overflow: unset;">
+<div class="container-fluid">
+<div class="row">
+<div class="tutorial-toc">
+<div class="toc-nav">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+linebreaks: { automatic: true, width: "container" }          
+}              
+});
+</script>
+<script type="text/javascript" src="{% static 'mathjax/latest/MathJax_config=TeX-AMS-MML_HTMLorMML.js' %}"></script>
+<div class="mini-logo">
+<img src="{% static 'images/python-mini-logo_v1.jpg' %}" alt="Python Tutorial">
+</div>
+<ul class="toc chapters">
+<li class="heading">Python Basics</li>
+<li><a href="{% url 'index_view' %}">Python - Home</a></li>
+<li><a href="{% url 'python_overview' %}">Python - Overview</a></li>
+<li><a href="{% url 'basic_syntax' %}">Python - Basic Syntax</a></li>
+<li><a href="{% url 'variables' %}">Python - Variables</a></li>
+<li><a href="{% url 'data_types' %}">Python - Data Types</a></li>
+<li><a href="{% url 'operators' %}">Python - Operators</a></li>
+<li><a href="{% url 'arithmetic_operators' %}">Python - Arithmetic Operators</a></li>
+<li><a href="{% url 'comments' %}">Python - Comments</a></li>
+<li><a href="{% url 'boolean' %}">Python - Booleans</a></li>
+<li><a href="{% url 'if_statement' %}">Python - If Statement</a></li>
+<li><a href="{% url 'if_else' %}">Python - If else</a></li>
+<li><a href="{% url 'nested_if' %}">Python - Nested If</a></li>
+<li><a href="{% url 'loops' %}">Python - Loops</a></li>
+<li><a href="{% url 'for_loops' %}">Python - for Loops</a></li>
+<li><a href="{% url 'while_loops' %}">Python - While Loops</a></li>
+<li><a href="{% url 'function' %}">Python - Functions</a></li>
+<li><a href="{% url 'strings' %}">Python - Strings</a></li>
+<li><a href="{% url 'slicing_string' %}">Python - Slicing Strings</a></li>
+<li><a href="{% url 'string_exercise' %}">Python - String Exercises</a></li>
+<li><a href="{% url 'list' %}">Python - Lists</a></li>
+<li><a href="{% url 'list-comprehension' %}">Python - List Comprehension</a></li>
+<li><a href="{% url 'list_methods' %}">Python - List Methods</a></li>
+<li><a href="{% url 'list_exercise' %}">Python - List Exercises</a></li>
+<li><a href="{% url 'tuple' %}">Python - Tuples</a></li>
+<li><a href="{% url 'tuple_methods' %}">Python - Tuple Methods</a></li>
+<li><a href="{% url 'tuple_exercise' %}">Python - Tuple Exercises</a></li>
+<li><a href="{% url 'set' %}">Python - Sets</a></li>
+<li><a href="{% url 'set_methods' %}">Python - Set Methods</a></li>
+<li><a href="{% url 'set_exercise' %}">Python - Set Exercises</a></li>
+<li><a href="{% url 'dictionary' %}">Python - Dictionaries</a></li>
+<li><a href="{% url 'dictionary_methods' %}">Python - Dictionary Methods</a></li>
+<li><a href="{% url 'dictionary_exercise' %}">Python - Dictionary Exercises</a></li>
+<li><a href="{% url 'array' %}">Python - Arrays</a></li>
+<li><a href="{% url 'oop_concepts' %}">Python - OOPs Concepts</a></li>
+<li><a href="{% url 'object_class' %}">Python - Object &amp; Classes</a></li>
+<li><a href="{% url 'class_attributes' %}">Python - Class Attributes</a></li>
+<li><a href="{% url 'class_methods' %}">Python - Class Methods</a></li>
+<li><a href="{% url 'inheritance' %}">Python - Inheritance</a></li>
+<li><a href="{% url 'polymorphism' %}">Python - Polymorphism</a></li>
+<li><a href="{% url 'encapsulation' %}">Python - Encapsulation</a></li>
+<li><a href="{% url 'package' %}">Python - Packages</a></li>
+<li><a href="{% url 'discuss' %}">Python - Discussion</a></li>
+</ul>
+      </div>
+      <div id="stickyparent" class="d-none d-sm-block">
+         <div style="height:250px;width:300px;" id="sticky-ad">
+            <div id="430c9911-782f-495d-88f9-69f58ca8c9a4" class="_ap_apex_ad">
+               <script>
+               var adpushup = adpushup || {};
+               adpushup.que = adpushup.que || [];
+               adpushup.que.push(function() {
+               adpushup.triggerAd("430c9911-782f-495d-88f9-69f58ca8c9a4");
+               });
+               </script>
+            </div>
+         </div>
+      </div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="tutorial-content" id="mainContent">
+<h1>Python - Functions</h1>
+<hr>
+<div id="adp_top_ads" style="text-align:center !important;overflow: hidden; max-height:99px;min-height:99px"></div>
+<script>
+     var adPos = document.getElementById('adp_top_ads');
+     var ad_id_720 = "8014640d-fd34-4b2e-9b1b-cc67234a2325";
+     var ad_id_650 = "2d1bb2c4-eb72-471d-9c80-1bf5514728c1";
+     var ad_id_300 = "df94a1a9-ae2f-432d-9a92-d93823ff4503";
+     var width = window.innerWidth;
+     var ad_id = ad_id_720;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+        adPos.style.minHeight = "260px";
+        adPos.style.maxHeight = "260px";
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+     var adpushup = adpushup || {};
+     adpushup.que = adpushup.que || [];
+     adpushup.que.push(function() {
+     adpushup.triggerAd(ad_id);
+     });
+</script>
+<hr>
+<div class="clearer"></div>
+<p>A Python function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.</p>
+<p>A top-to-down approach towards building the processing logic involves defining blocks of independent reusable functions. A Python function may be invoked from any other function by passing required data (called <b>parameters</b> or <b>arguments</b>). The called function returns its result back to the calling environment.</p>
+<img src="{% static 'images/python_functions.jpg' %}" alt="python functions">
+<h2>Types of Python Functions</h2>
+<p>Python provides the following types of functions −</p>
+<ul class="list">
+<li><p>Built-in functions</p></li>
+<li><p>Functions defined in built-in modules</p></li>
+<li><p>User-defined functions</p></li>
+</ul>
+<p>Python's standard library includes number of built-in functions. Some of Python's built-in functions are print(), int(), len(), sum(), etc. These functions are always available, as they are loaded into computer's memory as soon as you start Python interpreter.</p>
+<p>The standard library also bundles a number of modules. Each module defines a group of functions. These functions are not readily available. You need to import them into the memory from their respective modules.</p>
+<p>In addition to the built-in functions and functions in the built-in modules, you can also create your own functions. These functions are called user-defined <i>functions</i>.</p>
+<h2>Defining a Function in Python</h2>
+<p>You can define custom functions to provide the required functionality. Here are simple rules to define a function in Python.</p>
+<ul class="list">
+<li><p>Function blocks begin with the keyword <b>def</b> followed by the function name and parentheses ( ( ) ).</p></li>
+<li><p>Any input parameters or arguments should be placed within these parentheses. You can also define parameters inside these parentheses.</p></li>
+<li><p>The first statement of a function can be an optional statement; the documentation string of the function or docstring.</p></li>
+<li><p>The code block within every function starts with a colon (:) and is indented.</p></li>
+<li><p>The statement <b>return [expression]</b> exits a function, optionally passing back an expression to the caller. A <b>return</b> statement with no arguments is the same as return None.</p></li>
+</ul>
+<h3>Syntax</h3>
+<pre class="just-code notranslate language-python" data-lang="python">def functionname( parameters ):
+   "function_docstring"
+   function_suite
+   return [expression]
+</pre>
+<p>By default, parameters have a positional behavior and you need to inform them in the same order that they were defined.</p>
+<p>Once the function is defined, you can execute it by calling it from another function or directly from the Python prompt.</p>
+<h3>Example</h3>
+<p>The following example shows how to define a function greetings(). The bracket is empty so there aren't any parameters.</p>
+<p>The first line is the docstring. Function block ends with return statement. when this function is called, <b>Hello world</b> message will be printed.</p>
+<pre class="demo-code notranslate language-python" data-lang="python">def greetings():
+   "This is docstring of greetings function"
+   print ("Hello World")
+   return
+
+greetings()
+</pre>
+<h2>Calling a Function in Python</h2>
+<p>Defining a function only gives it a name, specifies the parameters that are to be included in the function and structures the blocks of code.</p>
+<p>Once the basic structure of a function is finalized, you can execute it by calling it from another function or directly from the Python prompt. Following is the example to call printme() function −</p>
+<pre class="demo-code notranslate language-python" data-lang="python3"># Function definition is here
+def printme( str ):
+   "This prints a passed string into this function"
+   print (str)
+   return;
+
+# Now you can call printme function
+printme("I'm first call to user defined function!")
+printme("Again second call to the same function")
+</pre>
+<p>When the above code is executed, it produces the following <b>output</b> −</p>
+<pre class="result notranslate">I'm first call to user defined function!
+Again second call to the same function
+</pre>
+<h2>Pass by Reference vs Value</h2>
+<p>The <b>function calling mechanism</b> of Python differs from that of C and C++. There are two main function calling mechanisms: <b>Call by Value</b> and <b>Call by Reference</b>.</p>
+<p>When a variable is passed to a function, what does the function do to it? If any changes to its variable doesnot get reflected in the actual argument, then it uses call by value mechanism. On the other hand, if the change is reflected, then it becomes call by reference mechanism.</p>
+<img src="{% static 'images/pass_by_reference_vs_value.jpg' %}" alt="Pass By Reference Vs Value">
+<p><b>C/C++ functions are said to be called by value</b>. When a function in C/C++ is called, the value of actual arguments is copied to the variables representing the formal arguments. If the function modifies the value of formal aergument, it doesn't reflect the variable that was passed to it.</p>
+<p><b>Python uses pass by reference mechanism</b>. As variable in Python is a label or reference to the object in the memory, the both the variables used as actual argument as well as formal arguments really refer to the same object in the memory. We can verify this fact by checking the id() of the passed variable before and after passing.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">def testfunction(arg):
+   print ("ID inside the function:", id(arg))
+
+var="Hello"
+print ("ID before passing:", id(var))
+testfunction(var)
+</pre>
+<p>If the above code is executed, the id() before passing and inside the function is same.</p>
+<pre class="result notranslate">ID before passing: 1996838294128
+ID inside the function: 1996838294128
+</pre>
+<p>The behaviour also depends on whether the passed object is mutable or immutable. Python numeric object is immutable. When a numeric object is passed, and then the function changes the value of the formal argument, it actually creates a new object in the memory, leaving the original variable unchanged.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">def testfunction(arg):
+   print ("ID inside the function:", id(arg))
+   arg=arg+1
+   print ("new object after increment", arg, id(arg))
+
+var=10
+print ("ID before passing:", id(var))
+testfunction(var)
+print ("value after function call", var)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">ID before passing: 140719550297160
+ID inside the function: 140719550297160
+new object after increment 11 140719550297192
+value after function call 10
+</pre>
+<p>Let us now pass a mutable object (such as a list or dictionary) to a function. It is also passed by reference, as the id() of lidt before and after passing is same. However, if we modify the list inside the function, its global representation also reflects the change.</p>
+<p>Here we pass a list, append a new item, and see the contents of original list object, which we will find has changed.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">def testfunction(arg):
+   print ("Inside function:",arg)
+   print ("ID inside the function:", id(arg))
+   arg=arg.append(100)
+   
+var=[10, 20, 30, 40]
+print ("ID before passing:", id(var))
+testfunction(var)
+print ("list after function call", var)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">ID before passing: 2716006372544
+Inside function: [10, 20, 30, 40]
+ID inside the function: 2716006372544
+list after function call [10, 20, 30, 40, 100]
+</pre>
+<h2>Function Arguments</h2>
+<p>The process of a function often depends on certain data provided to it while calling it. While defining a function, you must give a list of variables in which the data passed to it is collected. The variables in the parentheses are called formal arguments.</p>
+<p>When the function is called, value to each of the formal arguments must be provided. Those are called actual arguments.</p>
+<img src="{% static 'images/function_arguments.jpg' %}" alt="function arguments">
+<h3>Example</h3>
+<p>Let's modify greetings function and have name an argument. A string passed to the function as actual argument becomes name variable inside the function.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">def greetings(name):
+   "This is docstring of greetings function"
+   print ("Hello {}".format(name))
+   return
+   
+greetings("Samay")
+greetings("Pratima")
+greetings("Steven")
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">Hello Samay
+Hello Pratima
+Hello Steven
+</pre>
+<h2>Function with Return Value</h2>
+<p>The <b>return</b> keyword as the last statement in function definition indicates end of function block, and the program flow goes back to the calling function. Although reduced indent after the last statement in the block also implies return but using explicit return is a good practice.</p>
+<p>Along with the flow control, the function can also return value of an expression to the calling function. The value of returned expression can be stored in a variable for further processing.</p>
+<h3>Example</h3>
+<p>Let us define the add() function. It adds the two values passed to it and returns the addition. The returned value is stored in a variable called result.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">def add(x,y):
+   z=x+y
+   return z
+
+a=10
+b=20
+result = add(a,b)
+print ("a = {} b = {} a+b = {}".format(a, b, result))
+</pre>
+<p>It will produce the following output −</p>
+<pre class="result notranslate">a = 10 b = 20 a+b = 30
+</pre>
+<h2>Types of Function Arguments</h2>
+<p>Based on how the arguments are declared while defining a Python function, they are classified into the following categories −</p>
+<ul class="list">
+<li><p>Positional or required arguments</p></li>
+<li><p>Keyword arguments</p></li>
+<li><p>Default arguments</p></li>
+<li><p>Positional-only arguments</p></li>
+<li><p>Keyword-only arguments</p></li>
+<li><p>Arbitrary or variable-length arguments</p></li>
+</ul>
+<p>In the next few chapters, we will discuss these function arguments at length.</p>
+<h2>Order of Arguments</h2>
+<p>A function can have arguments of any of the types defined above. However, the arguments must be declared in the following order −</p>
+<ul class="list">
+<li><p>The argument list begins with the positional-only args, followed by the slash (/) symbol.</p></li>
+<li><p>It is followed by regular positional args that may or may not be called as keyword arguments.</p></li>
+<li><p>Then there may be one or more args with default values.</p></li>
+<li><p>Next, arbitrary positional arguments represented by a variable prefixed with single asterisk, that is treated as tuple. It is the next.</p></li>
+<li><p>If the function has any keyword-only arguments, put an asterisk before their names start. Some of the keyword-only arguments may have a default value.</p></li>
+<li><p>Last in the bracket is argument with two asterisks ** to accept arbitrary number of keyword arguments.</p></li>
+</ul>
+<p>The following diagram shows the order of formal arguments −</p>
+<img src="{% static 'images/order_of_formal_arguments.jpg' %}" alt="Order Of Formal Arguments">
+		<div class="bottom-library-ads mt" style="margin:5px;">
+	   <div class="google-bottom-ads" id="google-bottom-ads" style="height:280px;">
+			<div></div>
+			<div>
+			  <div id="adp_bottom_ads"></div>
+                        <a href="{% url 'execute_code' %}" class="go-to-compiler-button" style="display: inline-block; margin-top: 20px; text-decoration: none; color: #fff; background-color: #4caf50; padding: 10px 20px; font-size: 16px; border-radius: 4px; cursor: pointer;">
+            Let's Coding
+        </a>
+			  <script>
+				 var adPos = document.getElementById('adp_bottom_ads');
+				 var mobile_ad_id = "6d621d7e-9531-4f26-810f-68af67dc6366";
+				 var desktop_ad_id = "4951d1d6-24d4-4a31-afb7-2c22c489eae1";
+				 var adpushup = adpushup || {};
+				 adpushup.que = adpushup.que || [];
+				 adpushup.que.push(function() {
+					var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+					adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+					adpushup.triggerAd(ad_id);
+				 });
+			  </script>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<div>
+		<div class="data-sticky" id="google-right-ads">
+			<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;min-height:280px!important">
+			   <div id="2557b9b8-4c1f-4586-a953-f123dbd2ed8e" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("2557b9b8-4c1f-4586-a953-f123dbd2ed8e");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+			<div class="google-right-ad" style="margin-top:16px;min-height:280px!important">
+			   <div id="b078e6a3-e1b7-40fe-b690-11ac441ad2d5" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("b078e6a3-e1b7-40fe-b690-11ac441ad2d5");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+			<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;min-height:600px!important">
+			   <div id="8f8814c2-d64c-4d26-9cb9-543653c0b48f" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("8f8814c2-d64c-4d26-9cb9-543653c0b48f");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</main>
+
+
+
+<script sync="" src="{% static '/static/js/lib-script_v10.2.js' %}"></script>
+<script src="https://accounts.google.com/gsi/client" async="" defer=""></script> 
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EX9ZP4VY84"></script>
+<script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-EX9ZP4VY84');
+</script>
+
+
+</body></html>

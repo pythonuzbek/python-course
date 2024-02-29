@@ -1,0 +1,623 @@
+<!DOCTYPE html><html lang="en"><head>
+    {% load static %}
+<title>Python - Arithmetic Operators</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes, maximum-scale=6"> <meta name="Keywords" content="Operators, Arithmetic, Python, HTML, Python, CSS, SQL, JavaScript, Perl, PHP, Java, C, C++, C#, jQuery, Bootstrap, Colors, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Machine Learning, Data Science, Tutorials, Programming, Data Structure, Algorithms, Web Development, Training, Learning, Quiz, Exercises, Courses, References, Computer Science, Management, Finance, Examples, Articles, Demos, Tips, Website">
+<meta name="Description" content="Python - Arithmetic Operators - In Python, numbers are the most frequently used data type. Python uses the same symbols for basic arithmetic operations Everybody is familiar with, i.e., + for addition, - for subtraction, * for multiplication (most programming languages use * instead of the x as used in maths/algebra), an">
+<meta property="og:image" content="../images/tp_logo_436.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<meta property="og:title" content="Python - Arithmetic Operators">
+<meta property="og:description" content="Python - Arithmetic Operators - In Python, numbers are the most frequently used data type. Python uses the same symbols for basic arithmetic operations Everybody is familiar with, i.e., + for addition, - for subtraction, * for multiplication (most programming languages use * instead of the x as used in maths/algebra), an">
+<link rel="icon" href="{% static '/images/favicon.ico' %}">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/favicon-16x16.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&amp;family=Lato:wght@400;700&amp;family=Poppins:wght@400;500;600&amp;family=Raleway:wght@500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static '/static/css/lib-style_v41.56.css' %}" media="screen, print">
+<script id="adv" data-cfasync="false">(function(w, d) { var s = d.createElement('script'); s.src = '//cdn.adpushup.com/40046/adpushup.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<script>
+!function(t,e){var i=function(t,e){if(e.body){var n=e.createElement("div");n.className="ad-slot ad gpt-div-slot",n.style="position: absolute; visibility: hidden;",n.textContent="&nbsp;",e.body.appendChild(n),setTimeout((function(){if(0===n.clientHeight){var t=e.createElement("script");t.setAttribute("src","https://delivery.adrecover.com/18107/adRecover.js"),t.setAttribute("type","text/javascript"),t.setAttribute("async",!0),e.head.append(t)}}),0)}else setTimeout((function(){i(t,e)}),50)};i(t,e)}(window,document);
+</script>
+</head>
+<body style="--container: min(95%, 1780px);">
+<button class="icon-button--inverted scroll-to-top-button" title="Scroll Up">
+  <svg style="rotate: 180deg" width="24" height="24" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.52246 5.06689L6.08496 8.50439L2.64746 5.06689" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<main class="bg-light" style="overflow: unset;">
+<div class="container-fluid">
+<div class="row">
+<div class="tutorial-toc">
+<div class="toc-nav">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+linebreaks: { automatic: true, width: "container" }          
+}              
+});
+</script>
+<script type="text/javascript" src="{% static '/mathjax/latest/MathJax_config=TeX-AMS-MML_HTMLorMML.js' %}}"></script>
+<div class="mini-logo">
+<img src="{% static 'images/python-mini-logo_v1.jpg' %}" alt="Python Tutorial">
+</div>
+<ul class="toc chapters">
+<li class="heading">Python Basics</li>
+<li><a href="{% url 'index_view' %}">Python - Home</a></li>
+<li><a href="{% url 'python_overview' %}">Python - Overview</a></li>
+<li><a href="{% url 'basic_syntax' %}">Python - Basic Syntax</a></li>
+<li><a href="{% url 'variables' %}">Python - Variables</a></li>
+<li><a href="{% url 'data_types' %}">Python - Data Types</a></li>
+<li><a href="{% url 'operators' %}">Python - Operators</a></li>
+<li><a href="{% url 'arithmetic_operators' %}">Python - Arithmetic Operators</a></li>
+<li><a href="{% url 'comments' %}">Python - Comments</a></li>
+<li><a href="{% url 'boolean' %}">Python - Booleans</a></li>
+<li><a href="{% url 'if_statement' %}">Python - If Statement</a></li>
+<li><a href="{% url 'if_else' %}">Python - If else</a></li>
+<li><a href="{% url 'nested_if' %}">Python - Nested If</a></li>
+<li><a href="{% url 'loops' %}">Python - Loops</a></li>
+<li><a href="{% url 'for_loops' %}">Python - for Loops</a></li>
+<li><a href="{% url 'while_loops' %}">Python - While Loops</a></li>
+<li><a href="{% url 'function' %}">Python - Functions</a></li>
+<li><a href="{% url 'strings' %}">Python - Strings</a></li>
+<li><a href="{% url 'slicing_string' %}">Python - Slicing Strings</a></li>
+<li><a href="{% url 'string_exercise' %}">Python - String Exercises</a></li>
+<li><a href="{% url 'list' %}">Python - Lists</a></li>
+<li><a href="{% url 'list-comprehension' %}">Python - List Comprehension</a></li>
+<li><a href="{% url 'list_methods' %}">Python - List Methods</a></li>
+<li><a href="{% url 'list_exercise' %}">Python - List Exercises</a></li>
+<li><a href="{% url 'tuple' %}">Python - Tuples</a></li>
+<li><a href="{% url 'tuple_methods' %}">Python - Tuple Methods</a></li>
+<li><a href="{% url 'tuple_exercise' %}">Python - Tuple Exercises</a></li>
+<li><a href="{% url 'set' %}">Python - Sets</a></li>
+<li><a href="{% url 'set_methods' %}">Python - Set Methods</a></li>
+<li><a href="{% url 'set_exercise' %}">Python - Set Exercises</a></li>
+<li><a href="{% url 'dictionary' %}">Python - Dictionaries</a></li>
+<li><a href="{% url 'dictionary_methods' %}">Python - Dictionary Methods</a></li>
+<li><a href="{% url 'dictionary_exercise' %}">Python - Dictionary Exercises</a></li>
+<li><a href="{% url 'array' %}">Python - Arrays</a></li>
+<li><a href="{% url 'oop_concepts' %}">Python - OOPs Concepts</a></li>
+<li><a href="{% url 'object_class' %}">Python - Object &amp; Classes</a></li>
+<li><a href="{% url 'class_attributes' %}">Python - Class Attributes</a></li>
+<li><a href="{% url 'class_methods' %}">Python - Class Methods</a></li>
+<li><a href="{% url 'inheritance' %}">Python - Inheritance</a></li>
+<li><a href="{% url 'polymorphism' %}">Python - Polymorphism</a></li>
+<li><a href="{% url 'encapsulation' %}">Python - Encapsulation</a></li>
+<li><a href="{% url 'package' %}">Python - Packages</a></li>
+<li><a href="{% url 'discuss' %}">Python - Discussion</a></li>
+</ul>
+      </div>
+      <div id="stickyparent" class="d-none d-sm-block">
+         <div style="height:250px;width:300px;" id="sticky-ad">
+            <div id="430c9911-782f-495d-88f9-69f58ca8c9a4" class="_ap_apex_ad">
+               <script>
+               var adpushup = adpushup || {};
+               adpushup.que = adpushup.que || [];
+               adpushup.que.push(function() {
+               adpushup.triggerAd("430c9911-782f-495d-88f9-69f58ca8c9a4");
+               });
+               </script>
+            </div>
+         </div>
+      </div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="tutorial-content" id="mainContent">
+<h1>Python - Arithmetic Operators</h1>
+<hr>
+<div id="adp_top_ads" style="text-align:center !important;overflow: hidden; max-height:99px;min-height:99px"></div>
+<script>
+     var adPos = document.getElementById('adp_top_ads');
+     var ad_id_720 = "8014640d-fd34-4b2e-9b1b-cc67234a2325";
+     var ad_id_650 = "2d1bb2c4-eb72-471d-9c80-1bf5514728c1";
+     var ad_id_300 = "df94a1a9-ae2f-432d-9a92-d93823ff4503";
+     var width = window.innerWidth;
+     var ad_id = ad_id_720;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+        adPos.style.minHeight = "260px";
+        adPos.style.maxHeight = "260px";
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+     var adpushup = adpushup || {};
+     adpushup.que = adpushup.que || [];
+     adpushup.que.push(function() {
+     adpushup.triggerAd(ad_id);
+     });
+</script>
+<hr>
+<div class="clearer"></div>
+<p>In Python, numbers are the most frequently used <a href="{% url 'data_types' %}" target="_blank">data type</a>. Python uses the same symbols for basic arithmetic operations Everybody is familiar with, i.e., "+" for addition, "-" for subtraction, "*" for multiplication (most programming languages use "*" instead of the "x" as used in maths/algebra), and "/" for division (again for the "÷" used in Mathematics).</p>
+<p>In addition, Python defines few more arithmetic operators. They are "%" (Modulus), "**" (Exponent) and "//" (Floor division).</p>
+<h2>Python Arithmetic Operators</h2>
+<p>Arithmetic operators are binary operators in the sense they operate on two operands. Python fully supports mixed arithmetic. That is, the two operands can be of two different number types. In such a situation, Python widens the narrower of the operands. An integer object is narrower than float object, and float is narrower than complex object. Hence, the result of arithmetic operation of int and a float is a float. Result of float and a complex is a complex number, similarly, operation on an integer and a complex object results in a complex object.</p>
+<h2>Different Arithmetic Operators in Python</h2>
+<p>Following is the table which lists down all the arithmetic operators available in Python:</p>
+<div class="table-wrapper"><table class="table table-bordered">
+<tbody><tr>
+<th style="text-align:center;width:20%">Operator</th>
+<th style="text-align:center;width:45%">Name</th>
+<th style="text-align:center;">Example</th>
+</tr>
+<tr>
+<td>+</td>
+<td>Addition</td>
+<td>a + b = 30</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Subtraction</td>
+<td>a – b = -10</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+<td>a * b = 200</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Division</td>
+<td>b / a = 2</td>
+</tr>
+<tr>
+<td>%</td>
+<td> Modulus</td>
+<td>b % a = 0</td>
+</tr>
+<tr>
+<td>**</td>
+<td> Exponent</td>
+<td>a**b =10**20</td>
+</tr>
+<tr>
+<td>//</td>
+<td>Floor Division</td>
+<td>9//2 = 4</td>
+</tr>
+</tbody></table></div>
+<p>Let us study these operators with examples.</p>
+<h3>Addition Operator (+)</h3>
+<p>This operator pronounced as plus, is a basic arithmetic operator. It adds the two numeric operands on the either side and returns the addition result.</p>
+<h4>Example: Addition of Two Integers</h4>
+<p>In the following example, the two integer <a href="{% url 'variables' %}" target="_blank">variables</a> are the operands for the "+" operator.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10
+b=20
+print ("Addition of two integers")
+print ("a =",a,"b =",b,"addition =",a+b)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">Addition of two integers
+a = 10 b = 20 addition = 30
+</pre>
+<h4>Example: Addition of Integer and Float Numbers</h4>
+<p>Addition of integer and float results in a float.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10
+b=20.5
+print ("Addition of integer and float")
+print ("a =",a,"b =",b,"addition =",a+b)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">Addition of integer and float
+a = 10 b = 20.5 addition = 30.5
+</pre>
+<h4>Example: Addition of Two Complex Numbers</h4>
+<p>The result of adding float to complex is a complex number.</p>
+<pre class="demo-code notranslate language-python" data-lang="python">a=10+5j
+b=20.5
+print ("Addition of complex and float")
+print ("a=",a,"b=",b,"addition=",a+b)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">Addition of complex and float
+a= (10+5j) b= 20.5 addition= (30.5+5j)
+</pre>
+<h3>Subtraction Operator (-)</h3>
+<p>This operator, known as minus, subtracts the second operand from the first. The resultant number is negative if the second operand is larger.</p>
+<h4>Example: Subtraction of Two Integers</h4>
+<p>First example shows subtraction of two integers.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10
+b=20
+print ("Subtraction of two integers:")
+print ("a =",a,"b =",b,"a-b =",a-b)
+print ("a =",a,"b =",b,"b-a =",b-a)
+</pre>
+<p>Result −</p>
+<pre class="result notranslate">Subtraction of two integers
+a = 10 b = 20 a-b = -10
+a = 10 b = 20 b-a = 10
+</pre>
+<h4>Example: Subtraction of Integer and Float Numbers</h4>
+<p>Subtraction of an integer and a float follows the same principle.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10
+b=20.5
+print ("subtraction of integer and float")
+print ("a=",a,"b=",b,"a-b=",a-b)
+print ("a=",a,"b=",b,"b-a=",b-a)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">subtraction of integer and float
+a= 10 b= 20.5 a-b= -10.5
+a= 10 b= 20.5 b-a= 10.5
+</pre>
+<h4>Example: Subtraction of Two Complex Numbers</h4>
+<p>In the subtraction involving a complex and a float, real component is involved in the
+operation.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10+5j
+b=20.5
+print ("subtraction of complex and float")
+print ("a=",a,"b=",b,"a-b=",a-b)
+print ("a=",a,"b=",b,"b-a=",b-a)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">subtraction of complex and float
+a= (10+5j) b= 20.5 a-b= (-10.5+5j)
+a= (10+5j) b= 20.5 b-a= (10.5-5j)
+</pre>
+<h3>Multiplication Operator (*)</h3>
+<p>The * (asterisk) symbol is defined as a multiplication operator in Python (as in many languages). It returns the product of the two operands on its either side. If any of the operands negative, the result is also negative. If both are negative, the result is positive. Changing the order of operands doesn't change the result</p>
+<h4>Example: Multiplication of Two Integers</h4>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10
+b=20
+print ("Multiplication of two integers")
+print ("a =",a,"b =",b,"a*b =",a*b)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">Multiplication of two integers
+a = 10 b = 20 a*b = 200
+</pre>
+<h4>Example: Multiplication of Integer and Float Numbers</h4>
+<p>In multiplication, a float operand may have a standard decimal point notation, or a scientific notation.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10
+b=20.5
+print ("Multiplication of integer and float")
+print ("a=",a,"b=",b,"a*b=",a*b)
+
+a=-5.55
+b=6.75E-3
+print ("Multiplication of float and float")
+print ("a =",a,"b =",b,"a*b =",a*b)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">Multiplication of integer and float
+a = 10 b = 20.5 a-b = -10.5
+Multiplication of float and float
+a = -5.55 b = 0.00675 a*b = -0.037462499999999996
+</pre>
+<h4>Example: Multiplication With Complex Number</h4>
+<p>For the multiplication operation involving one complex operand, the other operand multiplies both the real part and imaginary part.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10+5j
+b=20.5
+print ("Multiplication of complex and float")
+print ("a =",a,"b =",b,"a*b =",a*b)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">Multiplication of complex and float
+a = (10+5j) b = 20.5 a*b = (205+102.5j)
+</pre>
+<h3>Division Operator (/)</h3>
+<p>The "/" symbol is usually called as forward slash. The result of division operator is numerator (left operand) divided by denominator (right operand). The resultant number is negative if any of the operands is negative. Since infinity cannot be stored in the memory, Python raises ZeroDivisionError if the denominator is 0.</p>
+<p>The result of division operator in Python is always a float, even if both operands are integers.</p>
+<h4>Example: Division of Two Integers</h4>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10
+b=20
+print ("Division of two integers")
+print ("a=",a,"b=",b,"a/b=",a/b)
+print ("a=",a,"b=",b,"b/a=",b/a)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">Division of two integers
+a= 10 b= 20 a/b= 0.5
+a= 10 b= 20 b/a= 2.0
+</pre>
+<h4>Example: Division With Float Numbers</h4>
+<p>In Division, a float operand may have a standard decimal point notation, or a scientific notation.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10
+b=-20.5
+print ("Division of integer and float")
+print ("a=",a,"b=",b,"a/b=",a/b)
+a=-2.50
+b=1.25E2
+print ("Division of float and float")
+print ("a=",a,"b=",b,"a/b=",a/b)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">Division of integer and float
+a= 10 b= -20.5 a/b= -0.4878048780487805
+Division of float and float
+a= -2.5 b= 125.0 a/b= -0.02
+</pre>
+<h4>Example: Division With Complex Number</h4>
+<p>When one of the operands is a complex number, division between the other operand and both parts of complex number (real and imaginary) object takes place.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=7.5+7.5j
+b=2.5
+print ("Division of complex and float")
+print ("a =",a,"b =",b,"a/b =",a/b)
+print ("a =",a,"b =",b,"b/a =",b/a)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">Division of complex and float
+a = (7.5+7.5j) b = 2.5 a/b = (3+3j)
+a = (7.5+7.5j) b = 2.5 b/a = (0.16666666666666666-0.16666666666666666j)
+</pre>
+<p>If the numerator is 0, the result of division is always 0 except when denominator is 0, in which case, Python raises ZeroDivisionError wirh Division by Zero error message.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=0
+b=2.5
+print ("a=",a,"b=",b,"a/b=",a/b)
+print ("a=",a,"b=",b,"b/a=",b/a)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">a= 0 b= 2.5 a/b= 0.0
+Traceback (most recent call last):
+  File "C:\Users\mlath\examples\example.py", line 20, in &lt;module&gt;
+     print ("a=",a,"b=",b,"b/a=",b/a)
+                                 ~^~
+ZeroDivisionError: float division by zero
+</pre>
+<h3>Modulus Operator (%)</h3>
+<p>Python defines the "%" symbol, which is known aa Percent symbol, as Modulus (or modulo) operator. It returns the remainder after the denominator divides the numerator. It can also be called Remainder operator. The result of the modulus operator is the number that remains after the integer quotient. To give an example, when 10 is divided by 3, the quotient is 3 and remainder is 1. Hence, 10%3 (normally pronounced as 10 mod 3) results in 1.</p>
+<h4>Example: Modulus Operation With Integer Values</h4>
+<p>If both the operands are integer, the modulus value is an integer. If numerator is completely divisible, remainder is 0. If numerator is smaller than denominator, modulus is equal to the numerator. If denominator is 0, Python raises ZeroDivisionError.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10
+b=2
+print ("a=",a, "b=",b, "a%b=", a%b)
+a=10
+b=4
+print ("a=",a, "b=",b, "a%b=", a%b)
+print ("a=",a, "b=",b, "b%a=", b%a)
+a=0
+b=10
+print ("a=",a, "b=",b, "a%b=", a%b)
+print ("a=", a, "b=", b, "b%a=",b%a)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">a= 10 b= 2 a%b= 0
+a= 10 b= 4 a%b= 2
+a= 10 b= 4 b%a= 4
+a= 0 b= 10 a%b= 0
+Traceback (most recent call last):
+  File "C:\Users\mlath\examples\example.py", line 13, in &lt;module&gt;
+    print ("a=", a, "b=", b, "b%a=",b%a)
+                                    ~^~
+ZeroDivisionError: integer modulo by zero
+</pre>
+<h4>Example: Modulus Operation With Float Values</h4>
+<p>If any of the operands is a float, the mod value is always float.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10
+b=2.5
+print ("a=",a, "b=",b, "a%b=", a%b)
+a=10
+b=1.5
+print ("a=",a, "b=",b, "a%b=", a%b)
+a=7.7
+b=2.5
+print ("a=",a, "b=",b, "a%b=", a%b)
+a=12.4
+b=3
+print ("a=",a, "b=",b, "a%b=", a%b)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">a= 10 b= 2.5 a%b= 0.0
+a= 10 b= 1.5 a%b= 1.0
+a= 7.7 b= 2.5 a%b= 0.20000000000000018
+a= 12.4 b= 3 a%b= 0.40000000000000036
+</pre>
+<p>Python doesn't accept complex numbers to be used as operand in modulus operation. It throws TypeError: unsupported operand type(s) for %.</p>
+<h3>Exponent Operator (**)</h3>
+<p>Python uses ** (double asterisk) as the exponent operator (sometimes called raised to operator). So, for a**b, you say a raised to b, or even bth power of a.</p>
+<p>If in the exponentiation expression, both operands are integer, result is also an integer. In case either one is a float, the result is float. Similarly, if either one operand is complex number, exponent operator returns a complex number.</p>
+<p>If the base is 0, the result is 0, and if the index is 0 then the result is always 1.</p>
+<h4>Example of Exponent Operator</h4>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=10
+b=2
+print ("a=",a, "b=",b, "a**b=", a**b)
+a=10
+b=1.5
+print ("a=",a, "b=",b, "a**b=", a**b)
+a=7.7
+b=2
+print ("a=",a, "b=",b, "a**b=", a**b)
+a=1+2j
+b=4
+print ("a=",a, "b=",b, "a**b=", a**b)
+a=12.4
+b=0
+print ("a=",a, "b=",b, "a**b=", a**b)
+print ("a=",a, "b=",b, "b**a=", b**a)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">a= 10 b= 2 a**b= 100
+a= 10 b= 1.5 a**b= 31.622776601683793
+a= 7.7 b= 2 a**b= 59.290000000000006
+a= (1+2j) b= 4 a**b= (-7-24j)
+a= 12.4 b= 0 a**b= 1.0
+a= 12.4 b= 0 b**a= 0.0
+</pre>
+<h3>Floor Division Operator (//)</h3>
+<p>Floor division is also called as integer division. Python uses // (double forward slash) symbol for the purpose. Unlike the modulus or modulo which returns the remainder, the floor division gives the quotient of the division of operands involved.</p>
+<p>If both operands are positive, floor operator returns a number with fractional part removed from it. For example, the floor division of 9.8 by 2 returns 4 (pure division is 4.9, strip the fractional part, result is 4).</p>
+<p>But if one of the operands is negative, the result is rounded away from zero (towards negative infinity). Floor division of -9.8 by 2 returns 5 (pure division is -4.9, rounded away from 0).</p>
+<h4>Example of Floor Division Operator</h4>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=9
+b=2
+print ("a=",a, "b=",b, "a//b=", a//b)
+a=9
+b=-2
+print ("a=",a, "b=",b, "a//b=", a//b)
+a=10
+b=1.5
+print ("a=",a, "b=",b, "a//b=", a//b)
+a=-10
+b=1.5
+print ("a=",a, "b=",b, "a//b=", a//b)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">a= 9 b= 2 a//b= 4
+a= 9 b= -2 a//b= -5
+a= 10 b= 1.5 a//b= 6.0
+a= -10 b= 1.5 a//b= -7.0
+</pre>
+<h2>Precedence and Associativity of Python Arithmetic Operators</h2>
+<div class="table-wrapper"><table class="table table-bordered">
+<tbody><tr>
+<th style="text-align:center;width:20%">Operator(s)</th>
+<th style="text-align:center;width:45%">Description</th>
+<th style="text-align:center;">Associativity</th>
+</tr>
+<tr>
+<td>**</td>
+<td>Exponent Operator</td>
+<td>Associativity of Exponent operator is from <b>Right to Left</b>.</td>
+</tr>
+<tr>
+<td>%, *, /, //</td>
+<td>Modulus, Multiplication, Division, and Floor Division</td>
+<td>Associativity of Modulus, Multiplication, Division, and Floor Division operators are from <b>Left to Right</b>.</td>
+</tr>
+<tr>
+<td>+, –</td>
+<td>Addition and Subtraction Operators</td>
+<td>Associativity of Addition and Subtraction operators are from <b>Left to Right</b>.</td>
+</tr>
+</tbody></table></div>
+<p>The following table shows the precedence and associativity of the arithmetic operators in Python.</p>
+
+<h2>Complex Number Arithmetic</h2>
+<p>Arithmetic operators behave slightly differently when the both operands are complex number objects.</p>
+<p>Addition and subtraction of complex numbers is a simple addition/subtraction of respective real and imaginary components.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=2.5+3.4j
+b=-3+1.0j
+print ("Addition of complex numbers - a=",a, "b=",b, "a+b=", a+b)
+print ("Subtraction of complex numbers - a=",a, "b=",b, "a-b=", a-b)
+</pre>
+<p>It will produce the following <b>output</b> −</p>
+<pre class="result notranslate">Addition of complex numbers - a= (2.5+3.4j) b= (-3+1j) a+b= (-0.5+4.4j)
+Subtraction of complex numbers - a= (2.5+3.4j) b= (-3+1j) a-b= (5.5+2.4j)
+</pre>
+<p>Multiplication of complex numbers is similar to multiplication of two binomials in algebra. If "a+bj" and "x+yj" are two complex numbers, then their multiplication is given by this formula −</p>
+<pre class="just-code notranslate language-python" data-lang="python">(a+bj)*(x+yj) = ax+ayj+xbj+byj<sup>2</sup> = (ax-by)+(ay+xb)j
+</pre>
+<p><b>For example,</b></p>
+<pre class="just-code notranslate language-python" data-lang="python3">a=6+4j
+b=3+2j
+c=a*b
+c=(18-8)+(12+12)j
+c=10+24j
+</pre>
+<p>The following program confirms the result −</p>
+<pre class="just-code notranslate language-python" data-lang="python3">a=6+4j
+b=3+2j
+print ("Multplication of complex numbers - a=",a, "b=",b, "a*b=", a*b)
+</pre>
+<p>To understand the how the division of two complex numbers takes place, we should use the conjugate of a complex number. Python's complex object has a conjugate() method that returns a complex number with the sign of imaginary part reversed.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; a=5+6j
+&gt;&gt;&gt; a.conjugate()
+(5-6j)
+</pre>
+<p>To divide two complex numbers, divide and multiply the numerator as well as the denominator with the conjugate of denominator. </p>
+<pre class="just-code notranslate language-python" data-lang="python">a=6+4j
+b=3+2j
+c=a/b
+c=(6+4j)/(3+2j)
+c=(6+4j)*(3-2j)/3+2j)*(3-2j)
+c=(18-12j+12j+8)/(9-6j+6j+4)
+c=26/13
+c=2+0j
+</pre>
+<p>To verify, run the following code −</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a=6+4j
+b=3+2j
+print ("Division of complex numbers - a=",a, "b=",b, "a/b=", a/b)
+</pre>
+<p>Complex class in Python doesn't support the modulus operator (%) and floor division operator (//).</p>
+		<div class="bottom-library-ads mt" style="margin:5px;">
+	   <div class="google-bottom-ads" id="google-bottom-ads" style="height:280px;">
+			<div></div>
+			<div>
+			  <div id="adp_bottom_ads"></div>
+                        <a href="{% url 'execute_code' %}" class="go-to-compiler-button" style="display: inline-block; margin-top: 20px; text-decoration: none; color: #fff; background-color: #4caf50; padding: 10px 20px; font-size: 16px; border-radius: 4px; cursor: pointer;">
+            Let's Coding
+        </a>
+			  <script>
+				 var adPos = document.getElementById('adp_bottom_ads');
+				 var mobile_ad_id = "6d621d7e-9531-4f26-810f-68af67dc6366";
+				 var desktop_ad_id = "4951d1d6-24d4-4a31-afb7-2c22c489eae1";
+				 var adpushup = adpushup || {};
+				 adpushup.que = adpushup.que || [];
+				 adpushup.que.push(function() {
+					var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+					adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+					adpushup.triggerAd(ad_id);
+				 });
+			  </script>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<div>
+		<div class="data-sticky" id="google-right-ads">
+			<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;min-height:280px!important">
+			   <div id="2557b9b8-4c1f-4586-a953-f123dbd2ed8e" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("2557b9b8-4c1f-4586-a953-f123dbd2ed8e");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+			<div class="google-right-ad" style="margin-top:16px;min-height:280px!important">
+			   <div id="b078e6a3-e1b7-40fe-b690-11ac441ad2d5" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("b078e6a3-e1b7-40fe-b690-11ac441ad2d5");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+			<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;min-height:600px!important">
+			   <div id="8f8814c2-d64c-4d26-9cb9-543653c0b48f" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("8f8814c2-d64c-4d26-9cb9-543653c0b48f");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</main>
+
+
+<script sync="" src="..{% static '/static/js/lib-script_v10.2.js' %}' %}"></script>
+<script src="https://accounts.google.com/gsi/client" async="" defer=""></script> 
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EX9ZP4VY84"></script>
+<script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-EX9ZP4VY84');
+</script>
+
+
+</body></html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en"><head>
+    {% load static %}
+<title>Python - OOP Concepts</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes, maximum-scale=6"> <meta name="Keywords" content="Concepts, OOP, Python, HTML, Python, CSS, SQL, JavaScript, Perl, PHP, Java, C, C++, C#, jQuery, Bootstrap, Colors, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Machine Learning, Data Science, Tutorials, Programming, Data Structure, Algorithms, Web Development, Training, Learning, Quiz, Exercises, Courses, References, Computer Science, Management, Finance, Examples, Articles, Demos, Tips, Website">
+<meta name="Description" content="Python - OOP Concepts - Python has been an object-oriented language since the time it existed. Due to this, creating and using classes and objects are downright easy. This chapter helps you become an expert in using Python's object-oriented programming support.">
+<meta property="og:image" content="../images/tp_logo_436.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<meta property="og:title" content="Python - OOP Concepts">
+<meta property="og:description" content="Python - OOP Concepts - Python has been an object-oriented language since the time it existed. Due to this, creating and using classes and objects are downright easy. This chapter helps you become an expert in using Python's object-oriented programming support.">
+<link rel="icon" href="{% static '/images/favicon.ico' %}">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/favicon-16x16.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&amp;family=Lato:wght@400;700&amp;family=Poppins:wght@400;500;600&amp;family=Raleway:wght@500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static '/static/css/lib-style_v41.56.css' %}" media="screen, print">
+<script id="adv" data-cfasync="false">(function(w, d) { var s = d.createElement('script'); s.src = '//cdn.adpushup.com/40046/adpushup.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<script>
+!function(t,e){var i=function(t,e){if(e.body){var n=e.createElement("div");n.className="ad-slot ad gpt-div-slot",n.style="position: absolute; visibility: hidden;",n.textContent="&nbsp;",e.body.appendChild(n),setTimeout((function(){if(0===n.clientHeight){var t=e.createElement("script");t.setAttribute("src","https://delivery.adrecover.com/18107/adRecover.js"),t.setAttribute("type","text/javascript"),t.setAttribute("async",!0),e.head.append(t)}}),0)}else setTimeout((function(){i(t,e)}),50)};i(t,e)}(window,document);
+</script>
+</head>
+<body style="--container: min(95%, 1780px);">
+<button class="icon-button--inverted scroll-to-top-button" title="Scroll Up">
+  <svg style="rotate: 180deg" width="24" height="24" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.52246 5.06689L6.08496 8.50439L2.64746 5.06689" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<main class="bg-light" style="overflow: unset;">
+<div class="container-fluid">
+<div class="row">
+<div class="tutorial-toc">
+<div class="toc-nav">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+linebreaks: { automatic: true, width: "container" }          
+}              
+});
+</script>
+<script type="text/javascript" src="{% static 'mathjax/latest/MathJax_config=TeX-AMS-MML_HTMLorMML.js' %}"></script>
+<div class="mini-logo">
+<img src="{% static 'images/python-mini-logo_v1.jpg' %}" alt="Python Tutorial">
+</div>
+<ul class="toc chapters">
+<li class="heading">Python Basics</li>
+<li><a href="{% url 'index_view' %}">Python - Home</a></li>
+<li><a href="{% url 'python_overview' %}">Python - Overview</a></li>
+<li><a href="{% url 'basic_syntax' %}">Python - Basic Syntax</a></li>
+<li><a href="{% url 'variables' %}">Python - Variables</a></li>
+<li><a href="{% url 'data_types' %}">Python - Data Types</a></li>
+<li><a href="{% url 'operators' %}">Python - Operators</a></li>
+<li><a href="{% url 'arithmetic_operators' %}">Python - Arithmetic Operators</a></li>
+<li><a href="{% url 'comments' %}">Python - Comments</a></li>
+<li><a href="{% url 'boolean' %}">Python - Booleans</a></li>
+<li><a href="{% url 'if_statement' %}">Python - If Statement</a></li>
+<li><a href="{% url 'if_else' %}">Python - If else</a></li>
+<li><a href="{% url 'nested_if' %}">Python - Nested If</a></li>
+<li><a href="{% url 'loops' %}">Python - Loops</a></li>
+<li><a href="{% url 'for_loops' %}">Python - for Loops</a></li>
+<li><a href="{% url 'while_loops' %}">Python - While Loops</a></li>
+<li><a href="{% url 'function' %}">Python - Functions</a></li>
+<li><a href="{% url 'strings' %}">Python - Strings</a></li>
+<li><a href="{% url 'slicing_string' %}">Python - Slicing Strings</a></li>
+<li><a href="{% url 'string_exercise' %}">Python - String Exercises</a></li>
+<li><a href="{% url 'list' %}">Python - Lists</a></li>
+<li><a href="{% url 'list-comprehension' %}">Python - List Comprehension</a></li>
+<li><a href="{% url 'list_methods' %}">Python - List Methods</a></li>
+<li><a href="{% url 'list_exercise' %}">Python - List Exercises</a></li>
+<li><a href="{% url 'tuple' %}">Python - Tuples</a></li>
+<li><a href="{% url 'tuple_methods' %}">Python - Tuple Methods</a></li>
+<li><a href="{% url 'tuple_exercise' %}">Python - Tuple Exercises</a></li>
+<li><a href="{% url 'set' %}">Python - Sets</a></li>
+<li><a href="{% url 'set_methods' %}">Python - Set Methods</a></li>
+<li><a href="{% url 'set_exercise' %}">Python - Set Exercises</a></li>
+<li><a href="{% url 'dictionary' %}">Python - Dictionaries</a></li>
+<li><a href="{% url 'dictionary_methods' %}">Python - Dictionary Methods</a></li>
+<li><a href="{% url 'dictionary_exercise' %}">Python - Dictionary Exercises</a></li>
+<li><a href="{% url 'array' %}">Python - Arrays</a></li>
+<li><a href="{% url 'oop_concepts' %}">Python - OOPs Concepts</a></li>
+<li><a href="{% url 'object_class' %}">Python - Object &amp; Classes</a></li>
+<li><a href="{% url 'class_attributes' %}">Python - Class Attributes</a></li>
+<li><a href="{% url 'class_methods' %}">Python - Class Methods</a></li>
+<li><a href="{% url 'inheritance' %}">Python - Inheritance</a></li>
+<li><a href="{% url 'polymorphism' %}">Python - Polymorphism</a></li>
+<li><a href="{% url 'encapsulation' %}">Python - Encapsulation</a></li>
+<li><a href="{% url 'package' %}">Python - Packages</a></li>
+<li><a href="{% url 'discuss' %}">Python - Discussion</a></li>
+</ul>
+      </div>
+      <div id="stickyparent" class="d-none d-sm-block">
+         <div style="height:250px;width:300px;" id="sticky-ad">
+            <div id="430c9911-782f-495d-88f9-69f58ca8c9a4" class="_ap_apex_ad">
+               <script>
+               var adpushup = adpushup || {};
+               adpushup.que = adpushup.que || [];
+               adpushup.que.push(function() {
+               adpushup.triggerAd("430c9911-782f-495d-88f9-69f58ca8c9a4");
+               });
+               </script>
+            </div>
+         </div>
+      </div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="tutorial-content" id="mainContent">
+<h1>Python - OOP Concepts</h1>
+<hr>
+<div id="adp_top_ads" style="text-align:center !important;overflow: hidden; max-height:99px;min-height:99px"></div>
+<script>
+     var adPos = document.getElementById('adp_top_ads');
+     var ad_id_720 = "8014640d-fd34-4b2e-9b1b-cc67234a2325";
+     var ad_id_650 = "2d1bb2c4-eb72-471d-9c80-1bf5514728c1";
+     var ad_id_300 = "df94a1a9-ae2f-432d-9a92-d93823ff4503";
+     var width = window.innerWidth;
+     var ad_id = ad_id_720;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+        adPos.style.minHeight = "260px";
+        adPos.style.maxHeight = "260px";
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+     var adpushup = adpushup || {};
+     adpushup.que = adpushup.que || [];
+     adpushup.que.push(function() {
+     adpushup.triggerAd(ad_id);
+     });
+</script>
+<hr>
+<div class="clearer"></div>
+<p>Python has been an object-oriented language since the time it existed. Due to this, creating and using classes and objects are downright easy. This chapter helps you become an expert in using Python's object-oriented programming support.</p>
+<p>If you do not have any previous experience with object-oriented (OO) programming, you may want to consult an introductory course on it or at least a tutorial of some sort so that you have a grasp of the basic concepts. However, here is a small introduction of Object-Oriented Programming (OOP) to help you.</p>
+<h2>Procedural Oriented Approach</h2>
+<p>Early programming languages developed in 50s and 60s are recognized as procedural (or procedure oriented) languages.</p>
+<p>A computer program describes procedure of performing certain task by writing a series of instructions in a logical order. Logic of a more complex program is broken down into smaller but independent and reusable blocks of statements called functions.</p>
+<p>Every function is written in such a way that it can interface with other functions in the program. Data belonging to a function can be easily shared with other in the form of arguments, and called function can return its result back to calling function.</p>
+<p>Prominent problems related to procedural approach are as follows −</p>
+<ul class="list">
+<li><p>Its top-down approach makes the program difficult to maintain.</p></li>
+<li><p>It uses a lot of global data items, which is undesired. Too many global data items would increase memory overhead.</p></li>
+<li><p>It gives more importance to process and doesn't consider data of same importance and takes it for granted, thereby it moves freely through the program.</p></li>
+<li><p>Movement of data across functions is unrestricted. In real-life scenario where there is unambiguous association of a function with data it is expected to process.</p></li>
+</ul>
+<h2>Python - OOP Concepts</h2>
+<p>In the real world, we deal with and process objects, such as student, employee, invoice, car, etc. Objects are not only data and not only functions, but combination of both. Each real-world object has attributes and behavior associated with it.</p>
+<img src="{% static 'images/oop_concepts.jpg' %}" alt="oop_concepts">
+<h3>Attributes</h3>
+<ul class="list">
+<li><p>Name, class, subjects, marks, etc., of student</p></li>
+<li><p>Name, designation, department, salary, etc., of employee</p></li>
+<li><p>Invoice number, customer, product code and name, price and quantity, etc., in an invoice</p></li>
+<li><p>Registration number, owner, company, brand, horsepower, speed, etc., of car</p></li>
+</ul>
+<p>Each attribute will have a value associated with it. Attribute is equivalent to data.</p>
+<h3>Behavior</h3>
+<p>Processing attributes associated with an object.</p>
+<ul class="list">
+<li><p>Compute percentage of student's marks</p></li>
+<li><p>Calculate incentives payable to employee</p></li>
+<li><p>Apply GST to invoice value</p></li>
+<li><p>Measure speed of car</p></li>
+</ul>
+<p>Behavior is equivalent to function. In real life, attributes and behavior are not independent of each other, rather they co-exist.</p>
+<p>The most important feature of object-oriented approach is defining attributes and their functionality as a single unit called class. It serves as a blueprint for all objects having similar attributes and behavior.</p>
+<p>In OOP, class defines what are the attributes its object has, and how is its behavior. Object, on the other hand, is an instance of the class.</p>
+<p>Object-oriented programming paradigm is characterized by the following principles −</p>
+<img src="{% static 'images/principles_of_oop.jpg' %}" alt="principles_of_oop">
+<h3>Class</h3>
+<p>A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.</p>
+<h3>Object</h3>
+<p>An individual object of a certain class. An object obj that belongs to a class Circle, for example, is an instance of the class Circle. A unique instance of a data structure that is defined by its class. An object comprises both data members (class variables and instance variables) and methods.</p>
+<h3>Encapsulation</h3>
+<p>Data members of class are available for processing to functions defined within the class only. Functions of class on the other hand are accessible from outside class context. So object data is hidden from environment that is external to class. Class function (also called method) encapsulates object data so that unwarranted access to it is prevented.</p>
+<h3>Inheritance</h3>
+<p>A software modelling approach of OOP enables extending capability of an existing class to build new class instead of building from scratch. In OOP terminology, existing class is called base or parent class, while new class is called child or sub class.</p>
+<p>Child class inherits data definitions and methods from parent class. This facilitates reuse of features already available. Child class can add few more definitions or redefine a base class function.</p>
+<h3>Polymorphism</h3>
+<p>Polymorphism is a Greek word meaning having multiple forms. In OOP, polymorphism occurs when each sub class provides its own implementation of an abstract method in base class.</p>
+		<div class="bottom-library-ads mt" style="margin:5px;">
+	   <div class="google-bottom-ads" id="google-bottom-ads" style="height:280px;">
+			<div></div>
+			<div>
+			  <div id="adp_bottom_ads"></div>
+                        <a href="{% url 'execute_code' %}" class="go-to-compiler-button" style="display: inline-block; margin-top: 20px; text-decoration: none; color: #fff; background-color: #4caf50; padding: 10px 20px; font-size: 16px; border-radius: 4px; cursor: pointer;">
+            Let's Coding
+        </a>
+			  <script>
+				 var adPos = document.getElementById('adp_bottom_ads');
+				 var mobile_ad_id = "6d621d7e-9531-4f26-810f-68af67dc6366";
+				 var desktop_ad_id = "4951d1d6-24d4-4a31-afb7-2c22c489eae1";
+				 var adpushup = adpushup || {};
+				 adpushup.que = adpushup.que || [];
+				 adpushup.que.push(function() {
+					var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+					adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+					adpushup.triggerAd(ad_id);
+				 });
+			  </script>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	<div>
+		<div class="data-sticky" id="google-right-ads">
+			<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;min-height:280px!important">
+			   <div id="2557b9b8-4c1f-4586-a953-f123dbd2ed8e" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("2557b9b8-4c1f-4586-a953-f123dbd2ed8e");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+			<div class="google-right-ad" style="margin-top:16px;min-height:280px!important">
+			   <div id="b078e6a3-e1b7-40fe-b690-11ac441ad2d5" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("b078e6a3-e1b7-40fe-b690-11ac441ad2d5");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+			<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;min-height:600px!important">
+			   <div id="8f8814c2-d64c-4d26-9cb9-543653c0b48f" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("8f8814c2-d64c-4d26-9cb9-543653c0b48f");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</main>
+
+
+
+<script sync="" src="{% static '/static/js/lib-script_v10.2.js' %}"></script>
+<script src="https://accounts.google.com/gsi/client" async="" defer=""></script> 
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EX9ZP4VY84"></script>
+<script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-EX9ZP4VY84');
+</script>
+
+
+</body></html>

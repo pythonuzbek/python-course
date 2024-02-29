@@ -1,0 +1,660 @@
+<!DOCTYPE html><html lang="en"><head>
+    {% load static %}
+<title>Python - Data Types</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes, maximum-scale=6"> <meta name="Keywords" content="Types, Data, Python, HTML, Python, CSS, SQL, JavaScript, Perl, PHP, Java, C, C++, C#, jQuery, Bootstrap, Colors, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Machine Learning, Data Science, Tutorials, Programming, Data Structure, Algorithms, Web Development, Training, Learning, Quiz, Exercises, Courses, References, Computer Science, Management, Finance, Examples, Articles, Demos, Tips, Website">
+<meta name="Description" content="Python - Data Types - Computer is a data processing device. Computer stores the data in its memory and processes it as per the given program. Data is a representation of facts about a certain object.">
+<meta property="og:image" content="../images/tp_logo_436.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<meta property="og:title" content="Python - Data Types">
+<meta property="og:description" content="Python - Data Types - Computer is a data processing device. Computer stores the data in its memory and processes it as per the given program. Data is a representation of facts about a certain object.">
+<link rel="icon" href="{% static '/images/favicon.ico' %}">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/favicon-16x16.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&amp;family=Lato:wght@400;700&amp;family=Poppins:wght@400;500;600&amp;family=Raleway:wght@500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static '/static/css/lib-style_v41.56.css' %}" media="screen, print">
+<script id="adv" data-cfasync="false">(function(w, d) { var s = d.createElement('script'); s.src = '//cdn.adpushup.com/40046/adpushup.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<script>
+!function(t,e){var i=function(t,e){if(e.body){var n=e.createElement("div");n.className="ad-slot ad gpt-div-slot",n.style="position: absolute; visibility: hidden;",n.textContent="&nbsp;",e.body.appendChild(n),setTimeout((function(){if(0===n.clientHeight){var t=e.createElement("script");t.setAttribute("src","https://delivery.adrecover.com/18107/adRecover.js"),t.setAttribute("type","text/javascript"),t.setAttribute("async",!0),e.head.append(t)}}),0)}else setTimeout((function(){i(t,e)}),50)};i(t,e)}(window,document);
+</script>
+</head>
+<body style="--container: min(95%, 1780px);">
+<button class="icon-button--inverted scroll-to-top-button" title="Scroll Up">
+  <svg style="rotate: 180deg" width="24" height="24" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.52246 5.06689L6.08496 8.50439L2.64746 5.06689" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<main class="bg-light" style="overflow: unset;">
+<div class="container-fluid">
+<div class="row">
+<div class="tutorial-toc">
+<div class="toc-nav">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+linebreaks: { automatic: true, width: "container" }          
+}              
+});
+</script>
+<script type="text/javascript" src="{% static 'mathjax/latest/MathJax_config=TeX-AMS-MML_HTMLorMML.js' %}"></script>
+<div class="mini-logo">
+<img src="{% static 'images/python-mini-logo_v1.jpg' %}" alt="Python Tutorial">
+</div>
+<ul class="toc chapters">
+<li class="heading">Python Basics</li>
+<li><a href="{% url 'index_view' %}">Python - Home</a></li>
+<li><a href="{% url 'python_overview' %}">Python - Overview</a></li>
+<li><a href="{% url 'basic_syntax' %}">Python - Basic Syntax</a></li>
+<li><a href="{% url 'variables' %}">Python - Variables</a></li>
+<li><a href="{% url 'data_types' %}">Python - Data Types</a></li>
+<li><a href="{% url 'operators' %}">Python - Operators</a></li>
+<li><a href="{% url 'arithmetic_operators' %}">Python - Arithmetic Operators</a></li>
+<li><a href="{% url 'comments' %}">Python - Comments</a></li>
+<li><a href="{% url 'boolean' %}">Python - Booleans</a></li>
+<li><a href="{% url 'if_statement' %}">Python - If Statement</a></li>
+<li><a href="{% url 'if_else' %}">Python - If else</a></li>
+<li><a href="{% url 'nested_if' %}">Python - Nested If</a></li>
+<li><a href="{% url 'loops' %}">Python - Loops</a></li>
+<li><a href="{% url 'for_loops' %}">Python - for Loops</a></li>
+<li><a href="{% url 'while_loops' %}">Python - While Loops</a></li>
+<li><a href="{% url 'function' %}">Python - Functions</a></li>
+<li><a href="{% url 'strings' %}">Python - Strings</a></li>
+<li><a href="{% url 'slicing_string' %}">Python - Slicing Strings</a></li>
+<li><a href="{% url 'string_exercise' %}">Python - String Exercises</a></li>
+<li><a href="{% url 'list' %}">Python - Lists</a></li>
+<li><a href="{% url 'list-comprehension' %}">Python - List Comprehension</a></li>
+<li><a href="{% url 'list_methods' %}">Python - List Methods</a></li>
+<li><a href="{% url 'list_exercise' %}">Python - List Exercises</a></li>
+<li><a href="{% url 'tuple' %}">Python - Tuples</a></li>
+<li><a href="{% url 'tuple_methods' %}">Python - Tuple Methods</a></li>
+<li><a href="{% url 'tuple_exercise' %}">Python - Tuple Exercises</a></li>
+<li><a href="{% url 'set' %}">Python - Sets</a></li>
+<li><a href="{% url 'set_methods' %}">Python - Set Methods</a></li>
+<li><a href="{% url 'set_exercise' %}">Python - Set Exercises</a></li>
+<li><a href="{% url 'dictionary' %}">Python - Dictionaries</a></li>
+<li><a href="{% url 'dictionary_methods' %}">Python - Dictionary Methods</a></li>
+<li><a href="{% url 'dictionary_exercise' %}">Python - Dictionary Exercises</a></li>
+<li><a href="{% url 'array' %}">Python - Arrays</a></li>
+<li><a href="{% url 'oop_concepts' %}">Python - OOPs Concepts</a></li>
+<li><a href="{% url 'object_class' %}">Python - Object &amp; Classes</a></li>
+<li><a href="{% url 'class_attributes' %}">Python - Class Attributes</a></li>
+<li><a href="{% url 'class_methods' %}">Python - Class Methods</a></li>
+<li><a href="{% url 'inheritance' %}">Python - Inheritance</a></li>
+<li><a href="{% url 'polymorphism' %}">Python - Polymorphism</a></li>
+<li><a href="{% url 'encapsulation' %}">Python - Encapsulation</a></li>
+<li><a href="{% url 'package' %}">Python - Packages</a></li>
+<li><a href="{% url 'discuss' %}">Python - Discussion</a></li>
+</ul>
+      </div>
+      <div id="stickyparent" class="d-none d-sm-block">
+         <div style="height:250px;width:300px;" id="sticky-ad">
+            <div id="430c9911-782f-495d-88f9-69f58ca8c9a4" class="_ap_apex_ad">
+               <script>
+               var adpushup = adpushup || {};
+               adpushup.que = adpushup.que || [];
+               adpushup.que.push(function() {
+               adpushup.triggerAd("430c9911-782f-495d-88f9-69f58ca8c9a4");
+               });
+               </script>
+            </div>
+         </div>
+      </div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="tutorial-content" id="mainContent">
+<h1>Python - Data Types</h1>
+<hr>
+<div id="adp_top_ads" style="text-align:center !important;overflow: hidden; max-height:99px;min-height:99px"></div>
+<script>
+     var adPos = document.getElementById('adp_top_ads');
+     var ad_id_720 = "8014640d-fd34-4b2e-9b1b-cc67234a2325";
+     var ad_id_650 = "2d1bb2c4-eb72-471d-9c80-1bf5514728c1";
+     var ad_id_300 = "df94a1a9-ae2f-432d-9a92-d93823ff4503";
+     var width = window.innerWidth;
+     var ad_id = ad_id_720;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+        adPos.style.minHeight = "260px";
+        adPos.style.maxHeight = "260px";
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+     var adpushup = adpushup || {};
+     adpushup.que = adpushup.que || [];
+     adpushup.que.push(function() {
+     adpushup.triggerAd(ad_id);
+     });
+</script>
+<hr>
+<div class="clearer"></div>
+<h2>Overview</h2>
+<p>Computer is a data processing device. Computer stores the data in its memory and processes it as per the given program. Data is a representation of facts about a certain object.</p>
+<p>Some examples of data −</p>
+<ul class="list">
+<li><p><b>Data of students</b> − name, gender, class, marks, age, fee etc.</p></li>
+<li><p><b>Data of books in library</b> − title, author, publisher, price, pages, year of publication etc.</p></li>
+<li><p><b>Data of employees in an office</b> − name, designation, salary, department, branch, etc.</p></li>
+</ul>
+<h2>What is a Data Type?</h2>
+<p>A <b>data type</b> represents a kind of value and determines what operations can be done on it. Numeric, non-numeric and Boolean (true/false) data are the most obvious data types. However, each programming language has its own classification largely reflecting its programming philosophy.</p>
+<h2>Data Types in Python</h2>
+<p>Python Data Types are used to define the type of a variable. It defines what type of data we are going to store in a <a href="{% url 'variables' %}" target="_blank">variable</a>.  The data stored in memory can be of many types. For example, a person's age is stored as a numeric value and his or her address is stored as alphanumeric characters.</p>
+<h2>Types of Python Data Types</h2>
+<p>Python has the following built-in data types which we will discuss in this tutorial:</p>
+<table class="table table-bordered" style="text-align:center;">
+<tbody><tr>
+<th style="text-align:center;">Data Type</th>
+<th style="text-align:center;">Examples</th>
+</tr>
+<tr>
+<td>Numeric</td>
+<td>int, float, complex</td>
+</tr>
+<tr>
+<td>String</td>
+<td>str</td>
+</tr>
+<tr>
+<td>Sequence</td>
+<td>list, tuple, range</td>
+</tr>
+<tr>
+<td>Binary</td>
+<td>bytes, bytearray, memoryview</td>
+</tr>
+<tr>
+<td>Mapping</td>
+<td>dict</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>set, frozenset</td>
+</tr>
+<tr>
+<td>None</td>
+<td>NoneType</td>
+</tr>
+</tbody></table>
+<img src="{% static 'images/data_types.jpg' %}" alt="data_types">
+<h3>Python Numeric Data Type</h3>
+<p>Python numeric data types store numeric values. Number objects are created when you assign a value to them. For example −</p>
+<pre class="just-code notranslate language-python" data-lang="python3">var1 = 1       # int data type
+var2 = True    # bool data type
+var3 = 10.023  # float data type
+var4 = 10+3j   # complex data type
+</pre>
+<p>Python supports four different numerical types and each of them have built-in classes in Python library, called <b>int, bool, float</b> and <b>complex</b> respectively −</p>
+<ul class="list">
+<li>int (signed integers)</li>
+<li>bool (subtype of integers.)</li>
+<li>float (floating point real values)</li>
+<li>complex (complex numbers)</li>
+</ul>
+
+<p>Python's standard library has a built-in function <b>type()</b>, which returns the class of the given object. Here, it is used to check the type of an integer and floating point number.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; type(123)
+&lt;class 'int'&gt;
+&gt;&gt;&gt; type(9.99)
+&lt;class 'float'&gt;
+</pre>
+<p>A complex number is made up of two parts - <b>real</b> and <b>imaginary</b>. They are separated by '+' or '-' signs. The imaginary part is suffixed by 'j' which is the imaginary number. The square root of -1 ($\sqrt{-1}$), is defined as imaginary number. Complex number in Python is represented as x+yj, where x is the real part, and y is the imaginary part. So, 5+6j is a complex number.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; type(5+6j)
+&lt;class 'complex'&gt;
+</pre>
+<p>A Boolean number has only two possible values, as represented by the keywords, <b>True</b> and <b>False</b>. They correspond to integer 1 and 0 respectively.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; type (True)
+&lt;class 'bool'&gt;
+&gt;&gt;&gt; type(False)
+&lt;class 'bool'&gt;
+</pre>
+
+<p>Here are some examples of numbers −</p>
+<table class="table table-bordered" style="text-align:center;">
+<tbody><tr>
+<th style="text-align:center;">int</th>
+<th style="text-align:center;">bool</th>
+<th style="text-align:center;">float</th>
+<th style="text-align:center;">complex</th>
+</tr>
+<tr>
+<td>10</td>
+<td>True</td>
+<td>0.0</td>
+<td>3.14j</td>
+</tr>
+<tr>
+<td>0O777</td>
+<td>False</td>
+<td>15.20</td>
+<td>45.j</td>
+</tr>
+<tr>
+<td>-786</td>
+<td></td>
+<td>-21.9</td>
+<td>9.322e-36j</td>
+</tr>
+<tr>
+<td>080</td>
+<td></td>
+<td>32.3+e18</td>
+<td>.876j</td>
+</tr>
+<tr>
+<td>0x17</td>
+<td></td>
+<td>-90.</td>
+<td>-.6545+0J</td>
+</tr>
+<tr>
+<td>-0x260</td>
+<td></td>
+<td>-32.54e100</td>
+<td>3e+26J</td>
+</tr>
+<tr>
+<td>0x69</td>
+<td></td>
+<td>70.2-E12</td>
+<td>4.53e-7j</td>
+</tr>
+</tbody></table>
+<h4>Example of Numeric Data Types</h4>
+<p>Following is an example to show the usage of Integer, Float and Complex numbers:</p>
+<pre class="demo-code notranslate language-python" data-lang="python3"># integer variable.
+a=100
+print("The type of variable having value", a, " is ", type(a))
+
+# boolean variable.
+b=True
+print("The type of variable having value", b, " is ", type(b))
+
+# float variable.
+c=20.345
+print("The type of variable having value", c, " is ", type(c))
+
+# complex variable.
+d=10+3j
+print("The type of variable having value", d, " is ", type(d))
+</pre>
+<h3>Python Sequence Data Type</h3>
+<p>Sequence is a collection data type. It is an ordered collection of items. Items in the sequence have a positional index starting with 0. It is conceptually similar to an array in C or C++. There are following three sequence data types defined in Python.</p>
+<ul class="list">
+<li>String Data Type</li>
+<li>List Data Type</li>
+<li>Tuple Data Type</li>
+</ul>
+<blockquote>Python sequences are bounded and iterable - Whenever we say an iterable in Python, it means a sequence data type (for example, a list).</blockquote>
+<h3>Python String Data Type</h3>
+<p><a href="{% url 'strings' %}" target="_blank">Python string</a> is a sequence of one or more Unicode characters, enclosed in single, double or triple quotation marks (also called inverted commas). Python strings are immutable which means when you perform an operation on strings, you always produce a new string object of the same type, rather than mutating an existing string.</p>
+<p>As long as the same sequence of characters is enclosed, single or double or triple quotes don't matter. Hence, following string representations are equivalent.</p>
+<pre class="just-code notranslate language-python" data-lang="python3">&gt;&gt;&gt; 'TutorialsPoint'
+'TutorialsPoint'
+&gt;&gt;&gt; "TutorialsPoint"
+'TutorialsPoint'
+&gt;&gt;&gt; '''TutorialsPoint'''
+'TutorialsPoint'
+</pre>
+<p>A string in Python is an object of <b>str</b> class. It can be verified with <b>type()</b> function.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; type("Welcome To TutorialsPoint")
+&lt;class 'str'&gt;
+</pre>
+
+<p>A string is a non-numeric data type. Obviously, we cannot perform arithmetic operations on it. However, operations such as <a href="{% url 'slicing_string' %}" target="_blank"><b>slicing</b></a> and <b>concatenation</b> can be done. Python's str class defines a number of useful methods for string processing. Subsets of strings can be taken using the slice operator ([ ] and [:] ) with indexes starting at 0 in the beginning of the string and working their way from -1 at the end.</p>
+<p>The plus (+) sign is the string concatenation operator and the asterisk (*) is the repetition operator in Python.</p>
+<h4>Example of String Data Type</h4>
+<pre class="demo-code notranslate language-python" data-lang="python3">str = 'Hello World!'
+
+print (str)          # Prints complete string
+print (str[0])       # Prints first character of the string
+print (str[2:5])     # Prints characters starting from 3rd to 5th
+print (str[2:])      # Prints string starting from 3rd character
+print (str * 2)      # Prints string two times
+print (str + "TEST") # Prints concatenated string
+</pre>
+<p>This will produce the following result −</p>
+<pre class="result notranslate">Hello World!
+H
+llo
+llo World!
+Hello World!Hello World!
+Hello World!TEST
+</pre>
+<h3>Python List Data Type</h3>
+<p><a href="{% url 'list' %}" target="_blank">Python Lists</a> are the most versatile compound data types. A Python list contains items separated by commas and enclosed within square brackets ([]). To some extent, Python lists are similar to arrays in C. One difference between them is that all the items belonging to a Python list can be of different data type where as C array can store elements related to a particular data type.</p>
+<pre class="just-code notranslate language-python" data-lang="python3">&gt;&gt;&gt; [2023, "Python", 3.11, 5+6j, 1.23E-4]
+</pre>
+<p>A list in Python is an object of <b>list</b> class. We can check it with type() function.</p>
+<pre class="just-code notranslate language-python" data-lang="python3">&gt;&gt;&gt; type([2023, "Python", 3.11, 5+6j, 1.23E-4])
+&lt;class 'list'&gt;
+</pre>
+<p>As mentioned, an item in the list may be of any data type. It means that a list object can
+also be an item in another list. In that case, it becomes a nested list.</p>
+<pre class="just-code notranslate language-python" data-lang="python3">&gt;&gt;&gt; [['One', 'Two', 'Three'], [1,2,3], [1.0, 2.0, 3.0]]
+</pre>
+<blockquote>A list can have items which are simple numbers, strings, tuple, dictionary, set or object of user defined class also.</blockquote>
+
+<p>The values stored in a Python list can be accessed using the slice operator ([ ] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1. The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator. For example −</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]
+tinylist = [123, 'john']
+
+print (list)            # Prints complete list
+print (list[0])         # Prints first element of the list
+print (list[1:3])       # Prints elements starting from 2nd till 3rd 
+print (list[2:])        # Prints elements starting from 3rd element
+print (tinylist * 2)    # Prints list two times
+print (list + tinylist) # Prints concatenated lists
+</pre>
+<p>This produce the following result −</p>
+<pre class="result notranslate">['abcd', 786, 2.23, 'john', 70.2]
+abcd
+[786, 2.23]
+[2.23, 'john', 70.2]
+[123, 'john', 123, 'john']
+['abcd', 786, 2.23, 'john', 70.2, 123, 'john']
+</pre>
+<h3>Python Tuple Data Type</h3>
+<p><a href="{% url 'tuple' %}" target="_blank">Python tuple</a> is another sequence data type that is similar to a list. A Python tuple consists of a number of values separated by commas. Unlike lists, however, tuples are enclosed within parentheses (...).</p>
+<p>A tuple is also a sequence, hence each item in the tuple has an index referring to its position in the collection. The index starts from 0.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; (2023, "Python", 3.11, 5+6j, 1.23E-4)
+</pre>
+<p>In Python, a tuple is an object of <b>tuple</b> class. We can check it with the type() function.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; type((2023, "Python", 3.11, 5+6j, 1.23E-4))
+&lt;class 'tuple'&gt;
+</pre>
+<p>As in case of a list, an item in the tuple may also be a list, a tuple itself or an object of any other Python class.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; (['One', 'Two', 'Three'], 1,2.0,3, (1.0, 2.0, 3.0))
+</pre>
+<p>To form a tuple, use of parentheses is optional. Data items separated by comma without any enclosing symbols are treated as a tuple by default.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; 2023, "Python", 3.11, 5+6j, 1.23E-4
+(2023, 'Python', 3.11, (5+6j), 0.000123)
+</pre>
+
+<p>The main differences between lists and tuples are: Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed .ie lists are mutable, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated (immutable). Tuples can be thought of as <b>read-only</b> lists. For example −</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
+tinytuple = (123, 'john')
+
+print (tuple)               # Prints the complete tuple
+print (tuple[0])            # Prints first element of the tuple
+print (tuple[1:3])          # Prints elements of the tuple starting from 2nd till 3rd 
+print (tuple[2:])           # Prints elements of the tuple starting from 3rd element
+print (tinytuple * 2)       # Prints the contents of the tuple twice
+print (tuple + tinytuple)   # Prints concatenated tuples
+</pre>
+<p>This produce the following result −</p>
+<pre class="result notranslate">('abcd', 786, 2.23, 'john', 70.2)
+abcd
+(786, 2.23)
+(2.23, 'john', 70.2)
+(123, 'john', 123, 'john')
+('abcd', 786, 2.23, 'john', 70.2, 123, 'john')
+</pre>
+<p>The following code is invalid with tuple, because we attempted to update a tuple, which is not allowed. Similar case is possible with lists −</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
+list = [ 'abcd', 786 , 2.23, 'john', 70.2  ]
+tuple[2] = 1000    # Invalid syntax with tuple
+list[2] = 1000     # Valid syntax with list
+</pre>
+<h3>Python Dictionary Data Type</h3>
+<p><a href="{% url 'dictionary' %}" target="_blank">Python dictionaries</a> are kind of hash table type. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.</p>
+<p>Python dictionary is like associative arrays or hashes found in Perl and consist of <b>key:value</b> pairs. The pairs are separated by comma and put inside curly brackets {}. To establish mapping between key and value, the semicolon':' symbol is put between the two.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; {1:'one', 2:'two', 3:'three'}
+</pre>
+<p>In Python, dictionary is an object of the built-in <b>dict</b> class. We can check it with the type() function.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; type({1:'one', 2:'two', 3:'three'})
+&lt;class 'dict'&gt;
+</pre>
+<p>Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed using square braces ([]). For example −</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">dict = {}
+dict['one'] = "This is one"
+dict[2]     = "This is two"
+
+tinydict = {'name': 'john','code':6734, 'dept': 'sales'}
+
+
+print (dict['one'])       # Prints value for 'one' key
+print (dict[2])           # Prints value for 2 key
+print (tinydict)          # Prints complete dictionary
+print (tinydict.keys())   # Prints all the keys
+print (tinydict.values()) # Prints all the values
+</pre>
+<p>This produce the following result −</p>
+<pre class="result notranslate">This is one
+This is two
+{'dept': 'sales', 'code': 6734, 'name': 'john'}
+['dept', 'code', 'name']
+['sales', 6734, 'john']
+</pre>
+<p>Python's dictionary is not a sequence. It is a collection of items but each item (key:value pair) is not identified by positional index as in string, list or tuple. Hence, slicing operation cannot be done on a dictionary. Dictionary is a mutable object, so it is possible to perform add, modify or delete actions with corresponding functionality defined in dict class. These operations will be explained in a subsequent chapter.</p>
+<h3>Python Set Data Type</h3>
+<p><a href="{% url 'set' %}" target="_blank">Set</a> is a Python implementation of set as defined in Mathematics. A set in Python is a collection, but is not an indexed or ordered collection as string, list or tuple. An object cannot appear more than once in a set, whereas in List and Tuple, same object can appear more than once.</p>
+<p>Comma separated items in a set are put inside curly brackets or braces {}. Items in the set collection can be of different data types.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; {2023, "Python", 3.11, 5+6j, 1.23E-4}
+{(5+6j), 3.11, 0.000123, 'Python', 2023}
+</pre>
+<p>Note that items in the set collection may not follow the same order in which they are entered. The position of items is optimized by Python to perform operations over set as defined in mathematics.</p>
+<p>Pythonâ€™s Set is an object of built-in <b>set</b> class, as can be checked with the type() function.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; type({2023, "Python", 3.11, 5+6j, 1.23E-4})
+&lt;class 'set'&gt;
+</pre>
+<p>A set can store only <b>immutable</b> objects such as number (int, float, complex or bool), string or tuple. If you try to put a list or a dictionary in the set collection, Python raises a <b>TypeError</b>.</p>
+<pre class="just-code notranslate language-python" data-lang="python">&gt;&gt;&gt; {['One', 'Two', 'Three'], 1,2,3, (1.0, 2.0, 3.0)}
+Traceback (most recent call last):
+   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: unhashable type: 'list'
+</pre>
+<p><b>Hashing</b> is a mechanism in computer science which enables quicker searching of objects in computer's memory. <b>Only immutable objects are hashable</b>.</p>
+<p>Even if a set doesn't allow mutable items, the set itself is mutable. Hence, add/delete/update operations are permitted on a set object, using the methods in built-in set class. Python also has a set of operators to perform set manipulation. The methods and operators are explained in latter chapters</p>
+<h3>Python Boolean Data Types</h3>
+<p>Python <b>boolean</b> type is one of built-in data types which represents one of the two values either <b>True</b> or <b>False</b>. Python  <b>bool()</b> function allows you to evaluate the value of any expression and returns either True or False based on the expression.</p>
+
+<h4>Example of Boolean Data Types</h4>
+<p>Following is a program which prints the value of boolean variables a and b −</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a = True
+# display the value of a
+print(a)
+
+# display the data type of a
+print(type(a))
+</pre>
+<p>This produce the following result −</p>
+<pre class="result notranslate">true
+&lt;class 'bool'&gt;
+</pre>
+<p>Following is another program which evaluates the expressions and prints the return values: </p>
+<pre class="demo-code notranslate language-python" data-lang="python3"># Returns false as a is not equal to b
+a = 2
+b = 4
+print(bool(a==b))
+
+# Following also prints the same
+print(a==b)
+
+# Returns False as a is None
+a = None
+print(bool(a))
+
+# Returns false as a is an empty sequence
+a = ()
+print(bool(a))
+
+# Returns false as a is 0
+a = 0.0
+print(bool(a))
+
+# Returns false as a is 10
+a = 10
+print(bool(a))
+</pre>
+<p>This produce the following result −</p>
+<pre class="result notranslate">False
+False
+False
+False
+False
+True
+</pre>
+<h2>Getting Data Type</h2>
+<p>In Python, to get the data type of a variable, use the <b>type()</b> method.</p>
+<h3>Example to Get Data Type</h3>
+<p>This example demonstrates the use of the type() method i.e., to get the data type of variables.</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">a = 10
+b = 10.23
+c = "TutorialsPoint"
+d = True
+
+# Printing types
+print(type(a))  # Returns &lt;class 'int'&gt;
+print(type(b))  # Returns &lt;class 'float'&gt;
+print(type(c))  # Returns &lt;class 'str'&gt;
+print(type(d))  # Returns &lt;class 'bool'&gt;
+</pre>
+
+
+
+<h2>Python Ranges Function</h2>
+<p>Python <b>range()</b> is an in-built function in Python which returns a sequence of numbers starting from 0 and increments to 1 until it reaches a specified number.</p>
+<p>We use <b>range()</b> function with for and while loop to generate a sequence of numbers. Following is the syntax of the function:</p>
+
+<pre class="just-code notranslate language-python" data-lang="python3">
+range(start, stop, step)
+</pre>
+<p>Here is the description of the parameters used:</p>
+<ul>
+<li><b>start</b>: Integer number to specify starting position, (Its optional, Default: 0)</li>
+<li><b>stop</b>: Integer number to specify starting position (It's mandatory)</li>
+<li><b>step</b>: Integer number to specify increment, (Its optional, Default: 1)</li>
+</ul>
+
+<h3>Examples</h3>
+<p>Following is a program which uses for loop to print number from 0 to 4 &minus;</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">
+for i in range(5):
+  print(i)
+</pre>
+<p>This produce the following result &minus;</p>
+<pre class="result notranslate">
+0
+1
+2
+3
+4
+</pre>
+<p>Now let's modify above program to print the number starting from 1 instead of 0:</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">
+for i in range(1, 5):
+  print(i)
+</pre>
+<p>This produce the following result &minus;</p>
+<pre class="result notranslate">
+1
+2
+3
+4
+</pre>
+<p>Again, let's modify the program to print the number starting from 1 but with an increment of 2 instead of 1:</p>
+<pre class="demo-code notranslate language-python" data-lang="python3">
+for i in range(1, 5, 2):
+  print(i)
+</pre>
+<p>This produce the following result &minus;</p>
+<pre class="result notranslate">
+1
+3
+</pre>
+		<div class="bottom-library-ads mt" style="margin:5px;">
+	   <div class="google-bottom-ads" id="google-bottom-ads" style="height:280px;">
+			<div></div>
+			<div>
+			  <div id="adp_bottom_ads"></div>
+                        <a href="{% url 'execute_code' %}" class="go-to-compiler-button" style="display: inline-block; margin-top: 20px; text-decoration: none; color: #fff; background-color: #4caf50; padding: 10px 20px; font-size: 16px; border-radius: 4px; cursor: pointer;">
+            Let's Coding
+        </a>
+			  <script>
+				 var adPos = document.getElementById('adp_bottom_ads');
+				 var mobile_ad_id = "6d621d7e-9531-4f26-810f-68af67dc6366";
+				 var desktop_ad_id = "4951d1d6-24d4-4a31-afb7-2c22c489eae1";
+				 var adpushup = adpushup || {};
+				 adpushup.que = adpushup.que || [];
+				 adpushup.que.push(function() {
+					var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+					adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+					adpushup.triggerAd(ad_id);
+				 });
+			  </script>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div>
+		<div class="data-sticky" id="google-right-ads">
+			<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;min-height:280px!important">
+			   <div id="2557b9b8-4c1f-4586-a953-f123dbd2ed8e" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("2557b9b8-4c1f-4586-a953-f123dbd2ed8e");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+			<div class="google-right-ad" style="margin-top:16px;min-height:280px!important">
+			   <div id="b078e6a3-e1b7-40fe-b690-11ac441ad2d5" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("b078e6a3-e1b7-40fe-b690-11ac441ad2d5");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+			<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;min-height:600px!important">
+			   <div id="8f8814c2-d64c-4d26-9cb9-543653c0b48f" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("8f8814c2-d64c-4d26-9cb9-543653c0b48f");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</main>
+
+
+<script sync="" src="..{% static '/static/js/lib-script_v10.2.js' %}"></script>
+<script src="https://accounts.google.com/gsi/client" async="" defer=""></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EX9ZP4VY84"></script>
+<script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-EX9ZP4VY84');
+</script>
+
+
+</body></html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="en"><head>
+    {% load static %}
+<title>Python Tutorial</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes, maximum-scale=6"> <meta name="Keywords" content="Tutorial, Python, HTML, Python, CSS, SQL, JavaScript, Perl, PHP, Java, C, C++, C#, jQuery, Bootstrap, Colors, XML, MySQL, Icons, NodeJS, React, Graphics, Angular, R, AI, Git, Machine Learning, Data Science, Tutorials, Programming, Data Structure, Algorithms, Web Development, Training, Learning, Quiz, Exercises, Courses, References, Computer Science, Management, Finance, Examples, Articles, Demos, Tips, Website">
+<meta name="Description" content="Python Tutorial - Today, Python is one of the most popular programming languages. Although it is a general-purpose language, it is used in various areas of applications such as Machine Learning, Artificial Intelligence, web development, IoT, and more.">
+<meta property="og:image" content="../images/tp_logo_436.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<meta property="og:title" content="Python Tutorial">
+<meta property="og:description" content="Python Tutorial - Today, Python is one of the most popular programming languages. Although it is a general-purpose language, it is used in various areas of applications such as Machine Learning, Artificial Intelligence, web development, IoT, and more.">
+<link rel="icon" href="{% static '/images/favicon.ico' %}">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static '/images/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static '/images/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static '/images/favicon-16x16.png' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&amp;family=Lato:wght@400;700&amp;family=Poppins:wght@400;500;600&amp;family=Raleway:wght@500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static '/static/css/lib-style_v41.56.css' %}" media="screen, print">
+<script id="adv" data-cfasync="false">(function(w, d) { var s = d.createElement('script'); s.src = '//cdn.adpushup.com/40046/adpushup.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<script>
+!function(t,e){var i=function(t,e){if(e.body){var n=e.createElement("div");n.className="ad-slot ad gpt-div-slot",n.style="position: absolute; visibility: hidden;",n.textContent="&nbsp;",e.body.appendChild(n),setTimeout((function(){if(0===n.clientHeight){var t=e.createElement("script");t.setAttribute("src","https://delivery.adrecover.com/18107/adRecover.js"),t.setAttribute("type","text/javascript"),t.setAttribute("async",!0),e.head.append(t)}}),0)}else setTimeout((function(){i(t,e)}),50)};i(t,e)}(window,document);
+</script>
+</head>
+<body style="--container: min(95%, 1780px);">
+<button class="icon-button--inverted scroll-to-top-button" title="Scroll Up">
+  <svg style="rotate: 180deg" width="24" height="24" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.52246 5.06689L6.08496 8.50439L2.64746 5.06689" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<main class="bg-light" style="overflow: unset;">
+<div class="container-fluid">
+<div class="row">
+<div class="tutorial-toc">
+<div class="toc-nav">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+linebreaks: { automatic: true, width: "container" }
+}
+});
+</script>
+<script type="text/javascript" src="{% static '/mathjax/latest/MathJax_config=TeX-AMS-MML_HTMLorMML.js' %}"></script>
+<div class="mini-logo">
+<img src="{% static 'images/python-mini-logo_v1.jpg' %}" alt="Python Tutorial">
+</div>
+<ul class="toc chapters">
+<li class="heading">Python Basics</li>
+<li><a href="{% url 'index_view' %}">Python - Home</a></li>
+<li><a href="{% url 'python_overview' %}">Python - Overview</a></li>
+<li><a href="{% url 'basic_syntax' %}">Python - Basic Syntax</a></li>
+<li><a href="{% url 'variables' %}">Python - Variables</a></li>
+<li><a href="{% url 'data_types' %}">Python - Data Types</a></li>
+<li><a href="{% url 'operators' %}">Python - Operators</a></li>
+<li><a href="{% url 'arithmetic_operators' %}">Python - Arithmetic Operators</a></li>
+<li><a href="{% url 'comments' %}">Python - Comments</a></li>
+<li><a href="{% url 'boolean' %}">Python - Booleans</a></li>
+<li><a href="{% url 'if_statement' %}">Python - If Statement</a></li>
+<li><a href="{% url 'if_else' %}">Python - If else</a></li>
+<li><a href="{% url 'nested_if' %}">Python - Nested If</a></li>
+<li><a href="{% url 'loops' %}">Python - Loops</a></li>
+<li><a href="{% url 'for_loops' %}">Python - for Loops</a></li>
+<li><a href="{% url 'while_loops' %}">Python - While Loops</a></li>
+<li><a href="{% url 'function' %}">Python - Functions</a></li>
+<li><a href="{% url 'strings' %}">Python - Strings</a></li>
+<li><a href="{% url 'slicing_string' %}">Python - Slicing Strings</a></li>
+<li><a href="{% url 'string_exercise' %}">Python - String Exercises</a></li>
+<li><a href="{% url 'list' %}">Python - Lists</a></li>
+<li><a href="{% url 'list-comprehension' %}">Python - List Comprehension</a></li>
+<li><a href="{% url 'list_methods' %}">Python - List Methods</a></li>
+<li><a href="{% url 'list_exercise' %}">Python - List Exercises</a></li>
+<li><a href="{% url 'tuple' %}">Python - Tuples</a></li>
+<li><a href="{% url 'tuple_methods' %}">Python - Tuple Methods</a></li>
+<li><a href="{% url 'tuple_exercise' %}">Python - Tuple Exercises</a></li>
+<li><a href="{% url 'set' %}">Python - Sets</a></li>
+<li><a href="{% url 'set_methods' %}">Python - Set Methods</a></li>
+<li><a href="{% url 'set_exercise' %}">Python - Set Exercises</a></li>
+<li><a href="{% url 'dictionary' %}">Python - Dictionaries</a></li>
+<li><a href="{% url 'dictionary_methods' %}">Python - Dictionary Methods</a></li>
+<li><a href="{% url 'dictionary_exercise' %}">Python - Dictionary Exercises</a></li>
+<li><a href="{% url 'array' %}">Python - Arrays</a></li>
+<li><a href="{% url 'oop_concepts' %}">Python - OOPs Concepts</a></li>
+<li><a href="{% url 'object_class' %}">Python - Object &amp; Classes</a></li>
+<li><a href="{% url 'class_attributes' %}">Python - Class Attributes</a></li>
+<li><a href="{% url 'class_methods' %}">Python - Class Methods</a></li>
+<li><a href="{% url 'inheritance' %}">Python - Inheritance</a></li>
+<li><a href="{% url 'polymorphism' %}">Python - Polymorphism</a></li>
+<li><a href="{% url 'encapsulation' %}">Python - Encapsulation</a></li>
+<li><a href="{% url 'package' %}">Python - Packages</a></li>
+<li><a href="{% url 'discuss' %}">Python - Discussion</a></li>
+</ul>
+
+      </div>
+      <div id="stickyparent" class="d-none d-sm-block">
+         <div style="height:250px;width:300px;" id="sticky-ad">
+            <div id="430c9911-782f-495d-88f9-69f58ca8c9a4" class="_ap_apex_ad">
+               <script>
+               var adpushup = adpushup || {};
+               adpushup.que = adpushup.que || [];
+               adpushup.que.push(function() {
+               adpushup.triggerAd("430c9911-782f-495d-88f9-69f58ca8c9a4");
+               });
+               </script>
+            </div>
+         </div>
+      </div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="tutorial-content" id="mainContent">
+<div class="cover">
+<img class="img-responsive" src="{% static '/images/python_v1.jpg' %}" alt="Python Tutorial">
+</div>
+<h1>Python Tutorial</h1>
+<div id="page-menu" aria-expanded="false" style="margin-left: auto;"><img src="{% static '/static/images/tableOfContents.svg' %}" alt="toggle"></div>
+<div class="table-of-content-wrapper">
+<div class="table-of-content">
+<header class="table-of-content__header">
+Table of content
+</header>
+<ul class="table-of-content__content">
+<li><a href="#introduction">Python Introduction</a></li>
+<li><a href="#what_is_python">What is Python</a></li>
+<li><a href="#python_jobs">Python Jobs</a></li>
+<li><a href="#why_python">Why to Learn Python</a></li>
+<li><a href="#python_interpreter">Python Interpreter</a></li>
+<li><a href="#python_career">Careers width Python</a></li>
+<li><a href="#characteristics">Python Characteristics</a></li>
+<li><a href="#applications">Python Applications</a></li>
+<li><a href="#audience">Python Audiences</a></li>
+<li><a href="#prerequisites">Python Prerequisites</a></li>
+<li><a href="#python_faq">Python FAQ</a></li>
+<li><a href="#question_answers">Python Questions &amp; Answers</a></li>
+</ul>
+</div>
+</div>
+
+<h2 id="introduction">Python Tutorial</h2>
+<p>Today, Python is one of the most popular programming languages. Although it is a general-purpose language, it is used in various areas of applications such as Machine Learning, Artificial Intelligence, web development, IoT, and more.</p>
+<p>This Python tutorial has been written for the beginners to help them understand the basic to advanced concepts of Python Programming Language. After completing this tutorial, you will find yourself at a great level of expertise in Python, from where you can take yourself to the next levels to become a world class Software Engineer.</p>
+<blockquote>This Python tutorial is based on the latest Python 3.11.2 version.</blockquote>
+<h2 id="what_is_python">What is Python?</h2>
+<p><b>Python</b> is a very popular general-purpose interpreted, interactive, object-oriented, and high-level programming language. Python is dynamically-typed and garbage-collected programming language. It was created by Guido van Rossum during 1985- 1990. Like Perl, Python source code is also available under the GNU General Public License (GPL).</p>
+<blockquote>Python supports multiple programming paradigms, including Procedural, Object Oriented and Functional programming language. Python design philosophy emphasizes code readability with the use of significant indentation.</blockquote>
+<p>This tutorial gives a complete understanding of Python programming language starting from basic conceopts to advanced concepts. This tutorial will take you through simple and practical approaches while learning Python Programming language.</p>
+<h2 id="python_jobs">Python Jobs</h2>
+<p>Today, Python is very high in demand and all the major companies are looking for great Python Programmers to develop websites, software components, and applications or to work with Data Science, AI, and ML technologies. When we are developing this tutorial in 2022, there is a high shortage of Python Programmers where as market demands more number of Python Programmers due to it's application in Machine Learning, Artificial Intelligence etc.</p>
+<p>Today a Python Programmer with 3-5 years of experience is asking for around $150,000 annual package and this is the most demanding programming language in America. Though it can vary depending on the location of the Job. It's impossible to list all of the companies using Python, to name a few big companies are:</p>
+<ul>
+<li>Google</li>
+<li>Intel</li>
+<li>NASA</li>
+<li>PayPal</li>
+<li>Facebook</li>
+<li>IBM</li>
+<li>Amazon</li>
+<li>Netflix</li>
+<li>Pinterest</li>
+<li>Uber</li>
+<li>Many more...</li>
+</ul>
+<p>So, you could be the next potential employee for any of these major companies. We have developed a great learning material for you to learn Python Programming which will help you prepare for the technical interviews and certification exams based on Python. So, start learning Python using this simple and effective tutorial from anywhere and anytime absolutely at your pace.</p>
+<h2 id="why_python">Why to Learn Python?</h2>
+<p>Python is consistently rated as one of the world's most popular programming languages. Python is fairly easy to learn,  so if you are starting to learn any programming language then Python could be your great choice. Today various Schools, Colleges and Universities are teaching Python as their primary programming language. There are many other good reasons which makes Python as the top choice of any programmer:</p>
+<ul>
+<li>Python is Open Source which means its available free of cost.</li>
+<li>Python is simple and so easy to learn</li>
+<li>Python is versatile and can be used to create many different things.</li>
+<li>Python has powerful development libraries include AI, ML etc.</li>
+<li>Python is much in demand and ensures high salary</li>
+</ul>
+<p><b>Python</b> is a MUST for students and working professionals to become a great Software Engineer specially when they are working in Web Development Domain. I will list down some of the key advantages of learning Python:</p>
+<ul>
+<li><b>Python is Interpreted</b> − Python is processed at runtime by the interpreter. You do not need to compile your program before executing it. This is similar to PERL and PHP.</li>
+<li><b>Python is Interactive</b> − You can actually sit at a Python prompt and interact with the interpreter directly to write your programs.</li>
+<li><b>Python is Object-Oriented</b> − Python supports Object-Oriented style or technique of programming that encapsulates code within objects.</li>
+<li><b>Python is a Beginner's Language</b> − Python is a great language for the beginner-level programmers and supports the development of a wide range of applications from simple text processing to WWW browsers to games.</li>
+</ul>
+<h2 id="python_interpreter">Python Online Compiler</h2>
+<p>Our Python programming tutorial provides various examples to explain different concepts. We have provided <a href="https://www.tutorialspoint.com/python/online-python-compiler.php" target="_blank">Online Python Compiler/Interpreter</a>. You can Edit and Execute almost all the examples directly from your browser without the need to set up your development environment.</p>
+<p>Try to click the icon <img class="run-button" src="../images/run-button.png" alt="run button"> to run the following Python code to print conventional "Hello, World!".</p>
+
+<blockquote>Below code box allows you to change the value of the code. Try to change the value inside <b>print()</b> and run it again to verify the result.</blockquote>
+<pre class="demo-code notranslate language-python" data-lang="python"># This is my first Python program.
+# This will print 'Hello, World!' as the output
+
+print ("Hello, World!");
+</pre>
+<h2 id="python_career">Careers with Python</h2>
+<p>If you know Python nicely, then you have a great career ahead. Here are just a few of the career options where Python is a key skill:</p>
+<ul>
+<li>Game developer</li>
+<li>Web designer</li>
+<li>Python developer</li>
+<li>Full-stack developer</li>
+<li>Machine learning engineer</li>
+<li>Data scientist</li>
+<li>Data analyst</li>
+<li>Data engineer</li>
+<li>DevOps engineer</li>
+<li>Software engineer</li>
+<li>Many more other roles</li>
+</ul>
+<h2 id="characteristics">Characteristics of Python</h2>
+<p>Following are important characteristics of <b>Python Programming</b> −</p>
+<ul class="list">
+<li>It supports functional and structured programming methods as well as OOP.</li>
+<li>It can be used as a scripting language or can be compiled to byte-code for building large applications.</li>
+<li>It provides very high-level dynamic data types and supports dynamic type checking.</li>
+<li>It supports automatic garbage collection.</li>
+<li>It can be easily integrated with C, C++, COM, ActiveX, CORBA, and Java.</li>
+</ul>
+<h2 id="applications">Applications of Python</h2>
+<p>The latest release of Python is 3.x. As mentioned before, Python is one of the most widely used language over the web. I'm going to list few of them here:</p>
+<ul>
+<li><b>Easy-to-learn</b> − Python has few keywords, simple structure, and a clearly defined syntax. This allows the student to pick up the language quickly.</li>
+<li><b>Easy-to-read</b> − Python code is more clearly defined and visible to the eyes.</li>
+<li><b>Easy-to-maintain</b> − Python's source code is fairly easy-to-maintain.</li>
+<li><b>A broad standard library</b> − Python's bulk of the library is very portable and cross-platform compatible on UNIX, Windows, and Macintosh.</li>
+<li><b>Interactive Mode</b> − Python has support for an interactive mode which allows interactive testing and debugging of snippets of code.</li>
+<li><b>Portable</b> − Python can run on a wide variety of hardware platforms and has the same interface on all platforms.</li>
+<li><b>Extendable</b> − You can add low-level modules to the Python interpreter. These modules enable programmers to add to or customize their tools to be more efficient.</li>
+<li><b>Databases</b> − Python provides interfaces to all major commercial databases.</li>
+<li><b>GUI Programming</b> − Python supports GUI applications that can be created and ported to many system calls, libraries and windows systems, such as Windows MFC, Macintosh, and the X Window system of Unix.</li>
+<li><b>Scalable</b> − Python provides a better structure and support for large programs than shell scripting.</li>
+</ul>
+<h2 id="audience">Target Audience</h2>
+<p>This tutorial has been prepared for the beginners to help them understand the basics to advanced concepts of Python programming language. After completing this tutorial, you will find yourself at a great level of expertise in Python programming, from where you can take yourself to the next levels.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Although it is a beginners tutorial, we assume that the readers have a reasonable exposure to any programming environment and knowledge of basic concepts such as variables, commands, syntax, etc.</p>
+<h2 id="python_faq">Frequently Asked Questions about Python</h2>
+<p>There are some very Frequently Asked Questions(FAQ) about Python, this section tries to answer them briefly.</p>
+
+<section class="toggle">
+<label aria-expanded="false" class="toggle__toggle">Why is Python easy for beginners?<img src="{% static '/static/images/chevron-up-black.svg' %}" alt="chevron"></label>
+<div class="toggle-content">
+<p>Python was designed to be concise and easy to read and it provides English like syntax all of which makes it more easy to understand to the first-time coders than many other languages. Python is also easy to learn because it is an interpreted programming language.</p>
+</div>
+</section>
+
+<section class="toggle">
+<label aria-expanded="false" class="toggle__toggle">What are the benefits of Python Programming Language?<img src="{% static 'static/images/chevron-up-black.svg' %}" alt="chevron"></label>
+<div class="toggle-content">
+<p>(a) Python is free and open source (b) Python is community driven and has expert leadership (c) Python is fast and high-performance. (d) Python is High-level language and easy to learn. (e) Python provides lot of third-party modules.(f) Portable across Operating systems  (g) Libraries for Machine Learning, Data Science and other modern technologies.</p>
+</div>
+</section>
+
+<section class="toggle">
+<label aria-expanded="false" class="toggle__toggle">How much time will it take to learn Python?<img src="{% static '/static/images/chevron-up-black.svg' %}" alt="chevron"></label>
+<div class="toggle-content">
+<p>Learning style, and dedication to the amount of time you can spend each day affect a lot. However, on average, it takes around 6 to 12 months to learn Python programming.</p>
+</div>
+</section>
+
+<section class="toggle">
+<label aria-expanded="false" class="toggle__toggle">Why Python is a so popular Programming Language?<img src="{% static '/static/images/chevron-up-black.svg' %}" alt="chevron"></label>
+<div class="toggle-content">
+<p>Python is a popular language for web and software development because you can create complex, multi-protocol applications while maintaining concise, readable syntax.</p>
+</div>
+</section>
+
+<section class="toggle">
+<label aria-expanded="false" class="toggle__toggle">What are the advantages of Python over Java?<img src="{% static '/static/images/chevron-up-black.svg' %}" alt="chevron"></label>
+<div class="toggle-content">
+<p>Although Java is faster, Python is more versatile, easier to read, and has a simpler syntax. As Python is an interpreted language, the code directly runs in the execution environment.</p>
+</div>
+</section>
+
+<section class="toggle">
+<label aria-expanded="false" class="toggle__toggle">How do I start learning Python?<img src="{% static '/static/images/chevron-up-black.svg' %}" alt="chevron"></label>
+<div class="toggle-content">
+<p>Here are the summarized list of tips which you can follow to start learning Python.</p>
+<ul class="contact">
+<li>First and the most important is to make your mind to learn Python.</li>
+<li>Install Python interpreter on your computer system.</li>
+<li>Follow our tutorial step by step starting from very begining.</li>
+<li>Read more articles, watch online courses or buy a book on Python to enhance your knowledge in Python.</li>
+<li>Try to develop a small software using Python and other libraries like Panda, NumPy etc.</li>
+</ul>
+</div>
+</section>
+
+<section class="toggle">
+<label aria-expanded="false" class="toggle__toggle">Which is the best place to learn Python?<img src="{% static '/static/images/chevron-up-black.svg' %}" alt="chevron"></label>
+<div class="toggle-content">
+<p>You can use our simple and the best Python tutorial to learn Python. We have removed all the unnecessary complexity while teaching you Python concepts. You can start learning it now <a href="{% url 'index_view' %}">Start Learning Python</a>.</p>
+</div>
+</section>
+</div>
+	
+	<div>
+		<div class="data-sticky" id="google-right-ads">
+			<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;min-height:280px!important">
+			   <div id="2557b9b8-4c1f-4586-a953-f123dbd2ed8e" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("2557b9b8-4c1f-4586-a953-f123dbd2ed8e");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+			<div class="google-right-ad" style="margin-top:16px;min-height:280px!important">
+			   <div id="b078e6a3-e1b7-40fe-b690-11ac441ad2d5" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("b078e6a3-e1b7-40fe-b690-11ac441ad2d5");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+			<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;min-height:600px!important">
+			   <div id="8f8814c2-d64c-4d26-9cb9-543653c0b48f" class="_ap_apex_ad">
+				  <script>
+					 if( window.innerWidth > 768 ){
+						var adpushup = adpushup || {};
+						adpushup.que = adpushup.que || [];
+						adpushup.que.push(function() {
+						adpushup.triggerAd("8f8814c2-d64c-4d26-9cb9-543653c0b48f");
+						});
+					 }
+				  </script>
+			   </div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</main>
+
+
+<script sync="" src="{% static '/static/js/lib-script_v10.2.js' %}' %}' %}"></script>
+<script src="https://accounts.google.com/gsi/client" async="" defer=""></script> 
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EX9ZP4VY84"></script>
+<script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-EX9ZP4VY84');
+</script>
+
+
+</body></html>
